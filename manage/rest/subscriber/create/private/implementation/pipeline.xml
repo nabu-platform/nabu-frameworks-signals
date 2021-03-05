@@ -1,0 +1,6 @@
+<structure interface="nabu.frameworks.signals.manage.rest.subscriber.create:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.frameworks.signals.types.propertyList" name="list"/>
+    <field minOccurs="0" name="listMarshalled" type="java.lang.String"/>
+</structure>

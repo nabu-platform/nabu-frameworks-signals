@@ -1,0 +1,71 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="5f9615f1-3a62-4ed7-8e3f-028287b970c6">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="5c0e9f05-2349-40e7-a17e-8a702f5f7ca1">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="7183a65d-aeb4-4041-b601-ee86a8b4197f"
+				serviceId="nabu.frameworks.signals.manage.crud.signalSubscriber.services.list"
+				resultName="result77b6de12077a451081aa0311c90f10b6"
+				temporaryMapping="true"
+				x="91"
+				y="33"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="973e3dd2-670d-497c-89ae-79adb5a1107a"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/limit</from>
+				<to>limit</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="030dc018-f424-4eb2-94c5-71ebc7e34684"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/offset</from>
+				<to>offset</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="8a74bee7-b4b4-4221-b4a6-fcb86d89a6b8"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/query/orderBy</from>
+				<to>orderBy</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="f6b8fd5a-4d24-4760-8eb4-69352412b813"
+				mask="true"
+				optional="false"
+				fixedValue="false">
+			<from>result77b6de12077a451081aa0311c90f10b6/results</from>
+			<to>output/content/subscribers</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="5fdd16b2-cfd4-427e-a452-daff337026d8"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result77b6de12077a451081aa0311c90f10b6/page</from>
+			<to>output/content/page</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="410c78df-fad8-42b3-87ab-155b4ae83df7"
+			variable="subscriber">
+		<query>output/content/subscribers</query>
+	</steps>
+</sequence>

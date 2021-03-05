@@ -2,10 +2,15 @@
 <crud>
     <allowHeaderAsQueryParameter>true</allowHeaderAsQueryParameter>
     <coreType>nabu.frameworks.signals.database.types.signalSubscriber</coreType>
+    <createBlacklistFields>created</createBlacklistFields>
+    <createBlacklistFields>modified</createBlacklistFields>
     <createRole>$user</createRole>
     <deleteRole>$user</deleteRole>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
+    <updateBlacklistFields>modified</updateBlacklistFields>
+    <updateBlacklistFields>created</updateBlacklistFields>
+    <updateRegenerateFields>modified</updateRegenerateFields>
     <updateRole>$user</updateRole>
     <useExplicitLanguage>false</useExplicitLanguage>
     <useLanguage>false</useLanguage>

@@ -5,47 +5,67 @@
 			disabled="false"
 			id="b9bc694d-6061-4c4a-8532-874a52c0fc58"
 			variable="rule">
-		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+		<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
 				disabled="false"
-				id="9597c419-076f-4c20-8e05-7e898f7e6f1b">
-			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				id="03ba77bb-ed2a-4304-a707-d1b775093fb2"
+				query="rule/rule">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					comment="This defaults to true but assumes the type id is filled in"
 					disabled="false"
-					id="2c35dd01-a552-4aab-bf92-c3c4822e6345"
-					serviceId="nabu.services.glue.Services.evaluate"
-					resultName="result768dbbc3d2e8494c8d363763197ec9c5"
-					temporaryMapping="true"
-					x="36"
-					y="86"
-					invocationOrder="0"
-					asynchronous="false"
-					recache="false">
+					id="129154b8-6250-4d47-ba69-7d6649b8d4eb"
+					label="null">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
-						id="3399bf18-5de8-4f99-a42f-9c71841070f7"
+						id="fb17ca95-2742-4bfb-96c1-16dc205585dc"
 						mask="false"
 						optional="false"
-						fixedValue="false">
-					<from>input/signal</from>
-					<to>context</to>
-				</steps>
-				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-						disabled="false"
-						id="2edcb81c-a1d6-448c-9b5f-0560b5e4ed48"
-						mask="false"
-						optional="false"
-						fixedValue="false">
-					<from>rule/rule</from>
-					<to>rule</to>
+						fixedValue="true">
+					<from>true</from>
+					<to>response</to>
 				</steps>
 			</steps>
-			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					disabled="false"
-					id="3a3702d5-2439-4fe1-9dbe-2d71a3c0d166"
-					mask="false"
-					optional="false"
-					fixedValue="false">
-				<from>result768dbbc3d2e8494c8d363763197ec9c5/response</from>
-				<to>response</to>
+					id="9597c419-076f-4c20-8e05-7e898f7e6f1b">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="2c35dd01-a552-4aab-bf92-c3c4822e6345"
+						serviceId="nabu.services.glue.Services.evaluate"
+						resultName="result768dbbc3d2e8494c8d363763197ec9c5"
+						temporaryMapping="true"
+						x="36"
+						y="86"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="3399bf18-5de8-4f99-a42f-9c71841070f7"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/signal</from>
+						<to>context</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="2edcb81c-a1d6-448c-9b5f-0560b5e4ed48"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>rule/rule</from>
+						<to>rule</to>
+					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="3a3702d5-2439-4fe1-9dbe-2d71a3c0d166"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>result768dbbc3d2e8494c8d363763197ec9c5/response</from>
+					<to>response</to>
+				</steps>
 			</steps>
 		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
@@ -247,6 +267,6 @@
 				<count>1</count>
 			</steps>
 		</steps>
-		<query>input/rules</query>
+		<query>input/rules[typeId = null || typeId = /input/typeId]</query>
 	</steps>
 </sequence>

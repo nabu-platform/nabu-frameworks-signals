@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2021-03-05T16:47:53.260+01:00" lastModified="2021-03-05T16:55:17.381+01:00" leaf="true" version="9">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.signals.types.propertyList</references>
+    <references>nabu.frameworks.signals.manage.rest.subscriber.createInput</references>
+    <references>java.lang.String</references>
+    <references>nabu.data.json.Services.marshal</references>
+    <references>nabu.frameworks.signals.manage.crud.signalSubscriber.services.create</references>
+</node>

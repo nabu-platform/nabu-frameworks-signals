@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2021-03-05T16:47:58.485+01:00" lastModified="2021-03-05T16:54:48.676+01:00" leaf="true" version="8">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.signals.database.types.signalSubscriber</references>
+    <references>nabu.utils.types.Property</references>
+</node>

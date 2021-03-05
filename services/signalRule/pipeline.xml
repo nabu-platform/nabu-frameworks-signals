@@ -12,4 +12,5 @@
     <field name="serviceInputMarshalled" type="java.lang.String"/>
     <structure definition="java.lang.Object" minOccurs="0" name="serviceOutput"/>
     <field name="serviceOutputMarshalled" type="java.lang.String"/>
+    <structure definition="java.lang.Object" minOccurs="0" name="propertyValue"/>
 </structure>
