@@ -1,0 +1,39 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="105fd318-c40a-467a-8ec3-772fa252ed9c">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Get connection settings"
+			disabled="false"
+			id="bbe11e8c-897c-4bee-9a55-4e4b2b641158">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="ae75c60b-1e35-4b05-9b8c-8edfd2bba306"
+				serviceId="nabu.utils.Server.property"
+				resultName="result57cdc7c8e50a497fb8be442c23683c9c"
+				temporaryMapping="true"
+				x="103"
+				y="54"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="d4c39b57-66b9-4ee2-8aab-3703d23df24e"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>signals.connection</from>
+				<to>key</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="5b4c6f9b-39a7-4b8d-87aa-843f34586a67"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result57cdc7c8e50a497fb8be442c23683c9c/value</from>
+			<to>output/connectionId</to>
+		</steps>
+	</steps>
+</sequence>

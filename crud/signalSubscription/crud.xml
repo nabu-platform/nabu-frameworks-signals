@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<crud>
+    <allowHeaderAsQueryParameter>true</allowHeaderAsQueryParameter>
+    <coreType>nabu.frameworks.signals.database.types.signalSubscription</coreType>
+    <createRole>$user</createRole>
+    <deleteRole>$user</deleteRole>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>signalRuleId</key>
+        <operator>=</operator>
+        <or>false</or>
+        <input>true</input>
+    </filters>
+    <foreignFields>
+        <foreignName>signalSubscriberId:serviceId</foreignName>
+        <localName>serviceId</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalSubscriberId:input</foreignName>
+        <localName>input</localName>
+    </foreignFields>
+    <listRole>$user</listRole>
+    <provider>nabu.services.crud.provider.basic.provider</provider>
+    <updateRole>$user</updateRole>
+    <useExplicitLanguage>false</useExplicitLanguage>
+    <useLanguage>false</useLanguage>
+</crud>

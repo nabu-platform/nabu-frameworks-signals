@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataModel>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalRule</type>
+        <x>87</x>
+        <y>58</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalSubscriber</type>
+        <x>786</x>
+        <y>374</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalSubscription</type>
+        <x>621</x>
+        <y>181</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalInstance</type>
+        <x>88</x>
+        <y>617</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalInstanceRule</type>
+        <x>140</x>
+        <y>417</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalInstanceSubscription</type>
+        <x>604</x>
+        <y>658</y>
+    </entries>
+</dataModel>

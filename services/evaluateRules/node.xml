@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-03-05T14:10:07.104+01:00" lastModified="2021-03-05T14:35:49.617+01:00" leaf="true" version="21">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.signals.crud.signalRule.services.list</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.Object</references>
+    <references>nabu.services.glue.Services.evaluate</references>
+    <references>java.lang.String</references>
+    <references>java.util.UUID</references>
+    <references>nabu.frameworks.signals.services.signalRule</references>
+    <references>java.lang.Integer</references>
+    <references>nabu.frameworks.signals.crud.signalRule.types.output</references>
+    <references>nabu.frameworks.signals.services.evaluateRules</references>
+</node>

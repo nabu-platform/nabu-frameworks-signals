@@ -1,0 +1,10 @@
+<structure name="pipeline">
+    <structure name="input">
+        <structure definition="java.lang.Object" name="signal"/>
+    </structure>
+    <structure name="output"/>
+    <field minOccurs="0" name="typeId" type="java.lang.String"/>
+    <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" maxOccurs="unbounded" minOccurs="0" name="rules"/>
+    <field minOccurs="0" name="connectionId" type="java.lang.String"/>
+    <structure collectionName="signalInstances" definition="nabu.frameworks.signals.crud.signalInstance.types.createOutput" name="signalInstance" restrict="created"/>
+</structure>

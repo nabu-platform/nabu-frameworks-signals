@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <webFragments>nabu.frameworks.signals.manage.crud.signalInstance</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.crud.signalInstanceRule</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.crud.signalInstanceSubscription</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.crud.signalRule</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.crud.signalSubscriber</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.crud.signalSubscription</webFragments>
+</webModule>

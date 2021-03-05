@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2021-03-05T15:11:45.882+01:00" lastModified="2021-03-05T15:14:23.205+01:00" leaf="true" version="3">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.signals.manage.crud.signalInstance</references>
+    <references>nabu.frameworks.signals.manage.crud.signalInstanceRule</references>
+    <references>nabu.frameworks.signals.manage.crud.signalInstanceSubscription</references>
+    <references>nabu.frameworks.signals.manage.crud.signalRule</references>
+    <references>nabu.frameworks.signals.manage.crud.signalSubscriber</references>
+    <references>nabu.frameworks.signals.manage.crud.signalSubscription</references>
+</node>

@@ -1,0 +1,9 @@
+<structure collectionName="signalSubscribers" name="signalSubscriber">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field name="created" timezone="UTC" type="java.util.Date"/>
+    <field name="modified" timezone="UTC" type="java.util.Date"/>
+    <field comment="The service that will be called" name="serviceId" type="java.lang.String"/>
+    <field comment="The input for the subscriber service. This is in key/value format as it may contain formulas for non-string fields." maxLength="100000000" minOccurs="0" name="input" type="java.lang.String"/>
+    <field comment="The name for the subscriber" name="name" type="java.lang.String"/>
+    <field comment="A description" minOccurs="0" name="description" type="java.lang.String"/>
+</structure>

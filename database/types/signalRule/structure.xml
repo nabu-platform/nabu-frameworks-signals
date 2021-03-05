@@ -1,0 +1,13 @@
+<structure collectionName="signalRules" name="signalRule">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field name="created" timezone="UTC" type="java.util.Date"/>
+    <field name="modified" timezone="UTC" type="java.util.Date"/>
+    <field comment="The actual rule" name="rule" type="java.lang.String"/>
+    <field comment="You can optionally limit a rule to a specific data type." minOccurs="0" name="typeId" type="java.lang.String"/>
+    <field comment="A custom name for this rule" minOccurs="0" name="name" type="java.lang.String"/>
+    <field comment="A custom description" minOccurs="0" name="description" type="java.lang.String"/>
+    <field generated="true" name="ruleIndex" type="java.lang.Long"/>
+    <field comment="The parent rule" foreignKey="nabu.frameworks.signals.database.types.signalRule:id" minOccurs="0" name="parentId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="The priority of the rule within a selection" name="priority" type="java.lang.Long"/>
+    <field comment="Allow multiple matches. If turned on the execution will continue." name="multiple" type="java.lang.Boolean"/>
+</structure>

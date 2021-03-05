@@ -1,0 +1,8 @@
+<structure collectionName="signalInstanceSubscriptions" name="signalInstanceSubscription">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field name="created" timezone="UTC" type="java.util.Date"/>
+    <field comment="This contains the json-stringified version of the input" maxLength="100000000" minOccurs="0" name="input" type="java.lang.String"/>
+    <field comment="The output of the service (if any)" maxLength="100000000" minOccurs="0" name="output" type="java.lang.String"/>
+    <field foreignKey="nabu.frameworks.signals.database.types.signalInstance:id" name="signalInstanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field foreignKey="nabu.frameworks.signals.database.types.signalSubscriber:id" name="signalSubscriberId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+</structure>

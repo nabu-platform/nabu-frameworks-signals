@@ -1,0 +1,252 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="f57e1a5e-2e7f-4954-a5e2-3e43848e80e3">
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="b9bc694d-6061-4c4a-8532-874a52c0fc58"
+			variable="rule">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="9597c419-076f-4c20-8e05-7e898f7e6f1b">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="2c35dd01-a552-4aab-bf92-c3c4822e6345"
+					serviceId="nabu.services.glue.Services.evaluate"
+					resultName="result768dbbc3d2e8494c8d363763197ec9c5"
+					temporaryMapping="true"
+					x="36"
+					y="86"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="3399bf18-5de8-4f99-a42f-9c71841070f7"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/signal</from>
+					<to>context</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="2edcb81c-a1d6-448c-9b5f-0560b5e4ed48"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>rule/rule</from>
+					<to>rule</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="3a3702d5-2439-4fe1-9dbe-2d71a3c0d166"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result768dbbc3d2e8494c8d363763197ec9c5/response</from>
+				<to>response</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
+				comment="If we have a match, check it"
+				disabled="false"
+				id="bf0d1120-792c-4b44-8738-0a27395b1a8e"
+				label="response = true">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					comment="Signal this rule"
+					disabled="false"
+					id="d4a7f432-5d82-4583-868d-ddd7ebc2b091">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="d7e08542-8b5e-4158-8df8-b7ef3b9f68ee"
+						serviceId="nabu.frameworks.signals.services.signalRule"
+						resultName="result8f61c9e9f5964bd79a550db4cabfeaa8"
+						temporaryMapping="true"
+						x="154"
+						y="62"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="a3dff594-ff0b-43a5-8f6a-dffedd49fa11"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>rule</from>
+						<to>rule</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="722f2cc2-e57a-44ef-a503-73a3bd0c3120"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/connectionId</from>
+						<to>connectionId</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="7bf60ad9-3da0-4a65-ade1-06f2102b6ac7"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/signal</from>
+						<to>signal</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="b01c550d-89c6-4bbf-9822-4f2a38145b09"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/signalInstanceId</from>
+						<to>signalInstanceId</to>
+					</steps>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					comment="Get child rules"
+					disabled="false"
+					id="18790583-2918-46bb-a578-194d5c2485c3">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="306d789f-8980-481a-826b-df8c6e5ab997"
+						serviceId="nabu.frameworks.signals.crud.signalRule.services.list"
+						resultName="resultb4954f82840d4251bee00f373efc3b4b"
+						temporaryMapping="true"
+						x="96"
+						y="27"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="385fd7f1-c9db-4407-a10f-0fd274ee394a"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>rule/id</from>
+						<to>filter/parentId[0]</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="39d17321-c7f1-410c-acee-acab0c3e3c85"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/typeId</from>
+						<to>filter/typeId[0]</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="a6fdcada-b808-4b1d-ac64-e195962aba9f"
+							mask="false"
+							optional="false"
+							fixedValue="true">
+						<from>true</from>
+						<to>filter/untyped</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="90f2a173-6059-4b10-bf4f-22e3a3d71273"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/connectionId</from>
+						<to>connectionId</to>
+					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="a13f207f-12ad-4952-a65f-acc92e55dad6"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>resultb4954f82840d4251bee00f373efc3b4b/results</from>
+					<to>children</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="d502aade-2012-41ce-a068-7ac97b6a7609"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>resultb4954f82840d4251bee00f373efc3b4b/page/total</from>
+					<to>amountOfChildren</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
+					id="f82ecdec-e83c-4515-9622-4eb88e56d0c4"
+					label="amountOfChildren &gt; 0">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="ec79d9d2-0bba-4751-956b-2a911db1fd82"
+						serviceId="nabu.frameworks.signals.services.evaluateRules"
+						resultName="resultebe2baad570646ca82f81854c1b6ff76"
+						temporaryMapping="true"
+						x="104"
+						y="29"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="e5b5d107-4f9c-44aa-9beb-8bfa698562d9"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>children</from>
+						<to>rules</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="df4b24f8-da8f-466e-973d-2149822b28f9"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/connectionId</from>
+						<to>connectionId</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="8d21fb40-3618-4db9-8b62-adfbf8687a58"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/typeId</from>
+						<to>typeId</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="4e947fdd-3d85-4d25-96b9-c81a0e93a5f8"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/signal</from>
+						<to>signal</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="86238afc-5dbe-46ad-9386-c8f4c6a7bb54"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/signalInstanceId</from>
+						<to>signalInstanceId</to>
+					</steps>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Break"
+					comment="If we don't want to allow multiple matches, stop"
+					disabled="false"
+					id="83affab2-e4df-4cfc-84fb-a251698753db"
+					label="rule/multiple != true">
+				<count>1</count>
+			</steps>
+		</steps>
+		<query>input/rules</query>
+	</steps>
+</sequence>
