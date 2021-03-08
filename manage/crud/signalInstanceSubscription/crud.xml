@@ -4,9 +4,39 @@
     <coreType>nabu.frameworks.signals.database.types.signalInstanceSubscription</coreType>
     <createRole>$user</createRole>
     <deleteRole>$user</deleteRole>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>signalInstanceId</key>
+        <operator>=</operator>
+        <or>false</or>
+        <input>true</input>
+    </filters>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
     <updateRole>$user</updateRole>
     <useExplicitLanguage>false</useExplicitLanguage>
     <useLanguage>false</useLanguage>
+    <views>
+        <filters>
+            <caseInsensitive>false</caseInsensitive>
+            <key>signalInstanceId</key>
+            <operator>=</operator>
+            <or>false</or>
+            <input>true</input>
+        </filters>
+        <foreignFields>
+            <foreignName>signalSubscriberId:name</foreignName>
+            <localName>name</localName>
+        </foreignFields>
+        <foreignFields>
+            <foreignName>signalSubscriberId:description</foreignName>
+            <localName>description</localName>
+        </foreignFields>
+        <foreignFields>
+            <foreignName>signalSubscriberId:serviceId</foreignName>
+            <localName>serviceId</localName>
+        </foreignFields>
+        <name>By Rule</name>
+        <type>LIST</type>
+    </views>
 </crud>

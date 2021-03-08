@@ -6,4 +6,8 @@
     <webFragments>nabu.frameworks.signals.manage.crud.signalRule</webFragments>
     <webFragments>nabu.frameworks.signals.manage.crud.signalSubscriber</webFragments>
     <webFragments>nabu.frameworks.signals.manage.crud.signalSubscription</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscriber.create</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscriber.list</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscriber.listProperties</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscriber.update</webFragments>
 </webModule>

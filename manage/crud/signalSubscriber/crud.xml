@@ -6,10 +6,25 @@
     <createBlacklistFields>modified</createBlacklistFields>
     <createRole>$user</createRole>
     <deleteRole>$user</deleteRole>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>name</key>
+        <operator>ilike</operator>
+        <or>false</or>
+        <input>true</input>
+    </filters>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>id</key>
+        <operator>=</operator>
+        <or>false</or>
+        <input>true</input>
+    </filters>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
     <updateBlacklistFields>modified</updateBlacklistFields>
     <updateBlacklistFields>created</updateBlacklistFields>
+    <updateBlacklistFields>serviceId</updateBlacklistFields>
     <updateRegenerateFields>modified</updateRegenerateFields>
     <updateRole>$user</updateRole>
     <useExplicitLanguage>false</useExplicitLanguage>

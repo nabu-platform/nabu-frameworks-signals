@@ -1,3 +1,3 @@
-<structure name="createInput" restrict="input, created, modified, id" superType="nabu.frameworks.signals.database.types.signalSubscriber">
+<structure name="createInput" restrict="input" superType="nabu.frameworks.signals.manage.crud.signalSubscriber.types.createInput">
     <structure definition="nabu.utils.types.Property" maxOccurs="unbounded" minOccurs="0" name="properties"/>
 </structure>

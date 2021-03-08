@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <restInterface>
-    <method>PUT</method>
-    <path>/signal/subscriberWithProperties/{subscriberId}</path>
+    <method>GET</method>
+    <path>/signal/subscriberServiceProperties/{serviceId}</path>
     <role>$user</role>
-    <input>nabu.frameworks.signals.manage.rest.subscriber.updateInput</input>
+    <output>nabu.frameworks.signals.manage.rest.subscriber.servicePropertyList</output>
     <lenient>true</lenient>
     <webApplicationId>false</webApplicationId>
     <geoPosition>false</geoPosition>
