@@ -3,20 +3,20 @@
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalRule</type>
-        <x>87</x>
-        <y>58</y>
+        <x>51</x>
+        <y>23</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalSubscriber</type>
-        <x>786</x>
-        <y>374</y>
+        <x>667</x>
+        <y>295</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalSubscription</type>
-        <x>621</x>
-        <y>181</y>
+        <x>528</x>
+        <y>121</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>

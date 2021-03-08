@@ -11,6 +11,13 @@
         <or>false</or>
         <input>true</input>
     </filters>
+    <filters>
+        <caseInsensitive>false</caseInsensitive>
+        <key>disabled</key>
+        <operator>=</operator>
+        <or>false</or>
+        <input>true</input>
+    </filters>
     <foreignFields>
         <foreignName>signalSubscriberId:serviceId</foreignName>
         <localName>serviceId</localName>
@@ -18,6 +25,10 @@
     <foreignFields>
         <foreignName>signalSubscriberId:input</foreignName>
         <localName>input</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalSubscriberId:disabled</foreignName>
+        <localName>disabled</localName>
     </foreignFields>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>

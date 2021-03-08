@@ -109,6 +109,15 @@
 				<from>input/path/subscriberId</from>
 				<to>id</to>
 			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="a2744d5f-adfc-4783-bbc6-55aebbd0aeb0"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/content/disabled</from>
+				<to>instance/disabled</to>
+			</steps>
 		</steps>
 	</steps>
 </sequence>

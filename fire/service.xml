@@ -231,6 +231,15 @@
 					<from>priority desc</from>
 					<to>orderBy[0]</to>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="f6647566-60cb-4e29-8b7c-3c4e8e644485"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>false</from>
+					<to>filter/disabled</to>
+				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"

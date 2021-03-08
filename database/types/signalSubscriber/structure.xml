@@ -6,4 +6,5 @@
     <field comment="The input for the subscriber service. This is in key/value format as it may contain formulas for non-string fields." maxLength="100000000" minOccurs="0" name="input" type="java.lang.String"/>
     <field comment="The name for the subscriber" name="name" type="java.lang.String"/>
     <field comment="A description" minOccurs="0" name="description" type="java.lang.String"/>
+    <field comment="You can soft delete a subscriber" name="disabled" type="java.lang.Boolean"/>
 </structure>

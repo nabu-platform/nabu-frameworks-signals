@@ -4,6 +4,7 @@
     <coreType>nabu.frameworks.signals.database.types.signalRule</coreType>
     <createBlacklistFields>created</createBlacklistFields>
     <createBlacklistFields>modified</createBlacklistFields>
+    <createBlacklistFields>disabled</createBlacklistFields>
     <createRole>$user</createRole>
     <deleteRole>$user</deleteRole>
     <filters>

@@ -177,6 +177,15 @@
 						<from>input/connectionId</from>
 						<to>connectionId</to>
 					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="eaa7eeff-722d-4c80-8978-61d15c6737dc"
+							mask="false"
+							optional="false"
+							fixedValue="true">
+						<from>false</from>
+						<to>filter/disabled</to>
+					</steps>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
