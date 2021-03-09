@@ -186,6 +186,21 @@
 						disabled="false"
 						id="0ad19595-103c-4b1b-80c2-bcc63468f23d">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+							comment="If you ask for the signal itself, send that"
+							disabled="false"
+							id="57626cf18df44ba3be3874447484d0d2"
+							label="property/value = &quot;=$signal&quot;">
+						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+								disabled="false"
+								id="179035eb-6e28-4a3e-ab23-4c746778156b"
+								mask="false"
+								optional="false"
+								fixedValue="false">
+							<from>input/signal</from>
+							<to>propertyValue</to>
+						</steps>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 							comment="If we have a formula, execute it"
 							disabled="false"
 							id="d53086d0-94cd-40f5-90c8-64e058a36b7e"

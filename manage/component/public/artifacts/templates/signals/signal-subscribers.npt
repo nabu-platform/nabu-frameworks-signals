@@ -1,8 +1,8 @@
 { 
 	"category": "Signal",
-	"name": "Signal Instances",
-	"description": "The signal instances that have been fired",
-	"icon": "images/signal/signal-antenna.png",
+	"name": "Signal Subscribers",
+	"description": "All the subscribers for the signals",
+	"icon": "images/signal/signal.png",
 	"content": {
 		"type": "page",
 		"content": {
