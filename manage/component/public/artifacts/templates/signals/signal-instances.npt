@@ -1,0 +1,568 @@
+{ 
+	"category": "Signal",
+	"name": "Signal Instances",
+	"description": "The signal instances that have been fired",
+	"icon": "images/signal/signal-antenna.png",
+	"content": {
+		"type": "page",
+		"content": {
+			"label": "Signal Instances",
+			"rows": [
+				{
+					"id": 1,
+					"cells": [
+						{
+							"id": 2,
+							"rows": [],
+							"alias": "data-table-list",
+							"bindings": {
+								"limit": null,
+								"offset": null,
+								"orderBy": null,
+								"properties": null
+							},
+							"name": null,
+							"state": {
+								"autoRefresh": null,
+								"orderBy": [
+									"created desc"
+								],
+								"filterPlaceHolder": null,
+								"filterType": "data-combo-filter",
+								"title": "Signal Instance",
+								"limit": 10,
+								"actions": [
+									{
+										"name": "showSubscriptions",
+										"icon": null,
+										"class": "secondary",
+										"label": null,
+										"condition": null,
+										"refresh": false,
+										"global": false,
+										"close": false,
+										"type": "button",
+										"useSelection": false
+									}
+								],
+								"filters": [],
+								"fields": [
+									{
+										"label": "%{Created}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "created",
+												"content": null,
+												"format": "date",
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {},
+												"dateFormat": "'yy MMM dd HH:mm",
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Alias}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "alias",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Realm}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "realm",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Type Id}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "typeId",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Content}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "content",
+												"content": null,
+												"format": "highlight",
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null
+											}
+										],
+										"styles": [],
+										"hidden": null
+									}
+								],
+								"updateOperation": null,
+								"updateBindings": {},
+								"multiselect": false,
+								"styles": [],
+								"refreshOn": [],
+								"showRefresh": true,
+								"result": {
+									"alias": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"authenticationId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"content": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"created": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"id": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"realm": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"typeId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									}
+								},
+								"operation": "nabu.frameworks.signals.manage.crud.signalInstance.services.list",
+								"comboFilter": {
+									"useTags": true
+								},
+								"useNativeTable": true
+							},
+							"target": "page",
+							"on": null,
+							"class": null,
+							"customId": null,
+							"width": 1,
+							"height": null,
+							"instances": {},
+							"condition": null,
+							"devices": [],
+							"clickEvent": null,
+							"$$initialize": null,
+							"result": {}
+						}
+					],
+					"class": null,
+					"customId": null,
+					"instances": {},
+					"condition": null,
+					"direction": null,
+					"align": null,
+					"on": null,
+					"collapsed": false,
+					"name": null
+				},
+				{
+					"id": 3,
+					"cells": [
+						{
+							"id": 4,
+							"rows": [],
+							"alias": "data-table-list",
+							"bindings": {
+								"limit": null,
+								"offset": null,
+								"orderBy": null,
+								"signalInstanceId": "showSubscriptions.id",
+								"properties": null
+							},
+							"name": null,
+							"state": {
+								"autoRefresh": null,
+								"orderBy": [
+									"signalRuleId"
+								],
+								"filterPlaceHolder": null,
+								"filterType": "data-combo-filter",
+								"title": "Triggered Subscribers",
+								"limit": 10,
+								"actions": [
+									{
+										"name": "showIO",
+										"icon": "fa-eye",
+										"class": null,
+										"label": null,
+										"condition": "state.record.input || state.record.output",
+										"refresh": false,
+										"global": false,
+										"close": false,
+										"type": "button",
+										"useSelection": false
+									}
+								],
+								"filters": [],
+								"fields": [
+									{
+										"label": "%{Rule Index}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "ruleIndex",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Rule Name}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "ruleName",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Subscriber Name}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "subscriberName",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Service Id}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "serviceId",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									}
+								],
+								"updateOperation": null,
+								"updateBindings": {},
+								"multiselect": false,
+								"styles": [],
+								"refreshOn": [],
+								"showRefresh": false,
+								"result": {
+									"created": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"description": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"id": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"input": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"name": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"output": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"signalInstanceId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"signalSubscriberId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"serviceId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"signalRuleId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"ruleIndex": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"ruleName": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"subscriberName": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									}
+								},
+								"operation": "nabu.frameworks.signals.manage.crud.signalInstanceSubscription.services.list",
+								"comboFilter": {
+									"useTags": true
+								},
+								"useNativeTable": true,
+								"emptyPlaceholder": "No subscribers triggered"
+							},
+							"target": "page",
+							"on": "showSubscriptions",
+							"class": null,
+							"customId": null,
+							"width": 1,
+							"height": null,
+							"instances": {},
+							"condition": null,
+							"devices": [],
+							"clickEvent": {
+								"eventFields": [],
+								"name": null
+							},
+							"$$initialize": null,
+							"result": {}
+						}
+					],
+					"class": null,
+					"customId": null,
+					"instances": {},
+					"condition": null,
+					"direction": null,
+					"align": null,
+					"on": null,
+					"collapsed": false,
+					"name": null
+				},
+				{
+					"id": 5,
+					"cells": [
+						{
+							"id": 6,
+							"rows": [],
+							"alias": "page-fields",
+							"bindings": {},
+							"name": null,
+							"state": {
+								"class": "facts",
+								"fields": [
+									{
+										"label": "Input",
+										"info": null,
+										"infoIcon": null,
+										"fragments": [
+											{
+												"type": "data",
+												"content": null,
+												"format": "highlight",
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"key": "showIO.input",
+												"disabled": null,
+												"hidden": null,
+												"form": {},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null,
+												"clickEvent": {
+													"eventFields": [],
+													"name": null
+												}
+											}
+										],
+										"hidden": "!$value(\"showIO.input\")",
+										"styles": [],
+										"arbitrary": false
+									},
+									{
+										"label": "Output",
+										"info": null,
+										"infoIcon": null,
+										"fragments": [
+											{
+												"type": "data",
+												"content": null,
+												"format": "highlight",
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"key": "showIO.output",
+												"disabled": null,
+												"hidden": null,
+												"form": {},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null,
+												"clickEvent": {
+													"eventFields": [],
+													"name": null
+												}
+											}
+										],
+										"hidden": "!$value(\"showIO.output\")",
+										"styles": [],
+										"arbitrary": false
+									}
+								]
+							},
+							"target": "sidebar",
+							"on": "showIO",
+							"class": null,
+							"customId": null,
+							"width": 1,
+							"height": null,
+							"instances": {},
+							"condition": null,
+							"devices": [],
+							"clickEvent": {
+								"eventFields": [],
+								"name": null
+							}
+						}
+					],
+					"class": null,
+					"customId": null,
+					"instances": {},
+					"condition": null,
+					"direction": null,
+					"align": null,
+					"on": null,
+					"collapsed": false,
+					"name": null
+				}
+			],
+			"path": "/signal/instances",
+			"counter": 7,
+			"variables": [],
+			"query": [],
+			"actions": [],
+			"class": null,
+			"initial": false,
+			"menuX": 0,
+			"menuY": 0,
+			"states": [],
+			"category": "Signalling",
+			"slow": false,
+			"name": "signal-instances"
+		}
+	}
+}

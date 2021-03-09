@@ -1,0 +1,12 @@
+{ 
+	"category": "Signal",
+	"name": "Signal Instances",
+	"description": "The signal instances that have been fired",
+	"icon": "images/signal/signal-antenna.png",
+	"content": {
+		"type": "page",
+		"content": {
+			// content comes here!
+		}
+	}
+}

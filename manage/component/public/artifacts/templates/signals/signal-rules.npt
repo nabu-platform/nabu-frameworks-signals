@@ -1,0 +1,1531 @@
+{ 
+	"category": "Signal",
+	"name": "Signal Instances",
+	"description": "The signal instances that have been fired",
+	"icon": "images/signal/signal-antenna.png",
+	"content": {
+		"type": "page",
+		"content": {
+			"label": "Signal Rules",
+			"rows": [
+				{
+					"id": 1,
+					"cells": [
+						{
+							"id": 2,
+							"rows": [],
+							"alias": "data-table-list",
+							"bindings": {
+								"limit": null,
+								"offset": null,
+								"orderBy": null,
+								"properties": null,
+								"parentId": "page.parentId",
+								"root": "fixed.=$value(\"page.parentId\") == null"
+							},
+							"name": null,
+							"state": {
+								"autoRefresh": null,
+								"orderBy": [
+									"priority desc"
+								],
+								"filterPlaceHolder": null,
+								"filterType": "data-combo-filter",
+								"title": "Signal Rules",
+								"limit": 10,
+								"actions": [
+									{
+										"name": "createSignalRule",
+										"global": true,
+										"label": "%{Create}",
+										"type": "button",
+										"class": "primary"
+									},
+									{
+										"name": "updateSignalRule",
+										"global": false,
+										"icon": "fa-pencil-alt",
+										"type": "button",
+										"class": "secondary"
+									},
+									{
+										"name": "showSubscribers",
+										"icon": "fa-envelope",
+										"class": "warning",
+										"label": null,
+										"condition": null,
+										"refresh": false,
+										"global": false,
+										"close": false,
+										"type": "button",
+										"useSelection": false
+									},
+									{
+										"name": "showChildRules",
+										"icon": "fa-chevron-right",
+										"class": "primary",
+										"label": null,
+										"condition": null,
+										"refresh": false,
+										"global": false,
+										"close": false,
+										"type": "button",
+										"useSelection": false
+									},
+									{
+										"name": "selectRule",
+										"icon": null,
+										"class": null,
+										"label": null,
+										"condition": null,
+										"refresh": false,
+										"global": false,
+										"close": false,
+										"type": "button",
+										"useSelection": false
+									}
+								],
+								"filters": [],
+								"fields": [
+									{
+										"label": "%{#}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "ruleIndex",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Created}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "created",
+												"content": null,
+												"format": "date",
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Name}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "name",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Rule}",
+										"info": null,
+										"infoIcon": null,
+										"fragments": [
+											{
+												"type": "data",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"key": "rule",
+												"disabled": null,
+												"hidden": null,
+												"form": {},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null
+											},
+											{
+												"type": "data",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"key": "typeId",
+												"disabled": null,
+												"hidden": "!!state.record.rule",
+												"form": {},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null
+											}
+										],
+										"hidden": null,
+										"styles": [],
+										"arbitrary": false
+									},
+									{
+										"label": "%{Priority}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "priority",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Multiple}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "multiple",
+												"content": null,
+												"format": "checkbox",
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Enabled}",
+										"info": null,
+										"infoIcon": null,
+										"fragments": [
+											{
+												"type": "form",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"key": null,
+												"disabled": null,
+												"hidden": null,
+												"form": {
+													"name": "disabled",
+													"label": null,
+													"description": null,
+													"type": "switch",
+													"enumerations": [],
+													"value": null,
+													"validationSuccessEvent": {
+														"eventFields": [],
+														"name": null
+													},
+													"hideLabel": false,
+													"invert": true
+												},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null
+											}
+										],
+										"hidden": null,
+										"styles": [],
+										"arbitrary": false
+									}
+								],
+								"updateOperation": "nabu.frameworks.signals.manage.crud.signalRule.services.update",
+								"updateBindings": {
+									"id": "record.id",
+									"body": null
+								},
+								"multiselect": false,
+								"styles": [],
+								"refreshOn": [
+									"createdSignalRule"
+								],
+								"showRefresh": false,
+								"result": {
+									"created": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"description": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"id": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"modified": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"multiple": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"name": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"parentId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"priority": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"rule": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"ruleIndex": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"typeId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"disabled": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"ownerId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									}
+								},
+								"operation": "nabu.frameworks.signals.manage.crud.signalRule.services.list",
+								"comboFilter": {
+									"useTags": true
+								},
+								"useNativeTable": true,
+								"emptyPlaceholder": "No rules yet"
+							},
+							"target": "page",
+							"on": null,
+							"class": null,
+							"customId": null,
+							"width": 1,
+							"height": null,
+							"instances": {},
+							"condition": null,
+							"devices": [],
+							"clickEvent": null,
+							"$$initialize": null,
+							"result": {}
+						}
+					],
+					"class": null,
+					"customId": null,
+					"instances": {},
+					"condition": null,
+					"direction": null,
+					"align": null,
+					"on": null,
+					"collapsed": false,
+					"name": null
+				},
+				{
+					"id": 7,
+					"cells": [
+						{
+							"id": 8,
+							"rows": [],
+							"alias": "data-table-list",
+							"bindings": {
+								"limit": null,
+								"offset": null,
+								"orderBy": null,
+								"signalRuleId": "selectRule.id",
+								"properties": null
+							},
+							"name": null,
+							"state": {
+								"autoRefresh": null,
+								"orderBy": [
+									"occurred desc"
+								],
+								"filterPlaceHolder": null,
+								"filterType": "data-combo-filter",
+								"title": "Signal Instances",
+								"limit": 10,
+								"actions": [
+									{
+										"name": "showSignalSubscriptions",
+										"icon": "fa-envelope",
+										"class": "secondary",
+										"label": null,
+										"condition": null,
+										"refresh": false,
+										"global": false,
+										"close": false,
+										"type": "button",
+										"useSelection": false,
+										"field": null
+									}
+								],
+								"filters": [],
+								"fields": [
+									{
+										"label": "%{Occurred}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "occurred",
+												"dateFormat": "'yy MMM dd HH:mm",
+												"tag": null,
+												"html": null,
+												"javascript": null,
+												"amountOfDecimals": null,
+												"format": "date",
+												"content": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Alias}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "alias",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Realm}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "realm",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": null,
+										"info": null,
+										"infoIcon": null,
+										"fragments": [
+											{
+												"type": "data",
+												"content": null,
+												"format": "highlight",
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"key": "content",
+												"disabled": null,
+												"hidden": null,
+												"form": {},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null
+											}
+										],
+										"hidden": null,
+										"styles": [],
+										"arbitrary": false
+									}
+								],
+								"updateOperation": null,
+								"updateBindings": {},
+								"multiselect": false,
+								"styles": [],
+								"refreshOn": [],
+								"showRefresh": true,
+								"result": {
+									"created": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"id": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"signalInstanceId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"signalRuleId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"alias": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"content": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"occurred": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"realm": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									}
+								},
+								"operation": "nabu.frameworks.signals.manage.crud.signalInstanceRule.services.listByRule",
+								"comboFilter": {
+									"useTags": true
+								},
+								"useNativeTable": true
+							},
+							"target": "page",
+							"on": "selectRule",
+							"class": null,
+							"customId": null,
+							"width": 1,
+							"height": null,
+							"instances": {},
+							"condition": null,
+							"devices": [],
+							"clickEvent": {
+								"eventFields": [],
+								"name": null
+							},
+							"$$initialize": null,
+							"result": {}
+						}
+					],
+					"class": null,
+					"customId": null,
+					"instances": {},
+					"condition": null,
+					"direction": null,
+					"align": null,
+					"on": null,
+					"collapsed": false,
+					"name": null
+				},
+				{
+					"id": 3,
+					"cells": [
+						{
+							"id": 4,
+							"rows": [],
+							"alias": "page-form",
+							"bindings": {
+								"body.rule": null,
+								"body.typeId": null,
+								"body.name": null,
+								"body.description": null,
+								"body.parentId": "page.parentId",
+								"body.priority": "fixed.0",
+								"body.multiple": null
+							},
+							"name": null,
+							"state": {
+								"title": "%{Create Signal Rule}",
+								"immediate": false,
+								"pages": [
+									{
+										"name": "Form Fields",
+										"title": null,
+										"fields": [
+											{
+												"arbitrary": false,
+												"name": "body.name",
+												"label": "%{Name}",
+												"description": null,
+												"type": "text",
+												"enumerations": [],
+												"value": null,
+												"group": "row",
+												"joinGroup": false,
+												"textType": null,
+												"bindings": {},
+												"validationSuccessEvent": {
+													"eventFields": [],
+													"name": null
+												}
+											},
+											{
+												"arbitrary": false,
+												"name": "body.typeId",
+												"label": "%{Type Id}",
+												"description": null,
+												"type": "text",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": true,
+												"textType": null,
+												"bindings": {},
+												"validationSuccessEvent": {
+													"eventFields": [],
+													"name": null
+												}
+											},
+											{
+												"arbitrary": false,
+												"name": "body.rule",
+												"label": "%{Rule}",
+												"description": null,
+												"type": "text",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": false
+											},
+											{
+												"arbitrary": false,
+												"name": "body.priority",
+												"label": "%{Priority}",
+												"description": null,
+												"type": "text",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": false,
+												"textType": "number"
+											},
+											{
+												"arbitrary": false,
+												"name": "body.description",
+												"label": "%{Description}",
+												"description": null,
+												"type": "text",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": false,
+												"textType": "area",
+												"bindings": {},
+												"validationSuccessEvent": {
+													"eventFields": [],
+													"name": null
+												}
+											},
+											{
+												"arbitrary": false,
+												"name": "body.multiple",
+												"label": "%{Multiple}",
+												"description": null,
+												"type": "switch",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": false,
+												"validationSuccessEvent": {
+													"eventFields": [],
+													"name": null
+												}
+											}
+										]
+									}
+								],
+								"class": null,
+								"ok": "Ok",
+								"edit": "Edit",
+								"next": "Next",
+								"cancel": "Cancel",
+								"event": "createdSignalRule",
+								"synchronize": false,
+								"operation": "nabu.frameworks.signals.manage.crud.signalRule.services.create",
+								"mode": "component"
+							},
+							"target": "prompt",
+							"on": "createSignalRule",
+							"class": null,
+							"customId": null,
+							"width": 1,
+							"height": null,
+							"instances": {},
+							"condition": null,
+							"devices": [],
+							"clickEvent": null,
+							"$$initialize": null,
+							"cellState": {
+								"form": {
+									"properties": {
+										"body": {
+											"type": "object",
+											"required": [
+												"name",
+												"priority",
+												"multiple"
+											],
+											"properties": {
+												"rule": {
+													"description": "The actual rule, it can be optional but then type should be filled in.",
+													"type": "string"
+												},
+												"typeId": {
+													"description": "You can optionally limit a rule to a specific data type.",
+													"type": "string"
+												},
+												"name": {
+													"description": "A custom name for this rule",
+													"type": "string"
+												},
+												"description": {
+													"description": "A custom description",
+													"type": "string"
+												},
+												"parentId": {
+													"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}",
+													"description": "The parent rule",
+													"type": "string",
+													"format": "uuid"
+												},
+												"priority": {
+													"description": "The priority of the rule within a selection",
+													"type": "integer",
+													"format": "int64"
+												},
+												"multiple": {
+													"description": "Allow multiple matches. If turned on the execution will continue.",
+													"type": "boolean"
+												},
+												"ownerId": {
+													"description": "Allow for owned rules so it can be used at the application level. This should be the authentication id.",
+													"type": "string"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"class": null,
+					"customId": null,
+					"instances": {},
+					"condition": null,
+					"direction": null,
+					"align": null,
+					"on": null,
+					"collapsed": false,
+					"name": null
+				},
+				{
+					"id": 5,
+					"cells": [
+						{
+							"id": 6,
+							"rows": [],
+							"alias": "page-form",
+							"bindings": {
+								"id": "updateSignalRule.id",
+								"body.rule": "updateSignalRule.rule",
+								"body.typeId": "updateSignalRule.typeId",
+								"body.name": "updateSignalRule.name",
+								"body.description": "updateSignalRule.description",
+								"body.parentId": "updateSignalRule.parentId",
+								"body.priority": "updateSignalRule.priority",
+								"body.multiple": "updateSignalRule.multiple"
+							},
+							"name": null,
+							"state": {
+								"title": "%{Update Signal Rule}",
+								"immediate": false,
+								"pages": [
+									{
+										"name": "Form Fields",
+										"title": null,
+										"fields": [
+											{
+												"arbitrary": false,
+												"name": "body.name",
+												"label": "%{Name}",
+												"description": null,
+												"type": "text",
+												"enumerations": [],
+												"value": null,
+												"group": "row",
+												"joinGroup": false,
+												"textType": null,
+												"bindings": {},
+												"validationSuccessEvent": {
+													"eventFields": [],
+													"name": null
+												}
+											},
+											{
+												"arbitrary": false,
+												"name": "body.typeId",
+												"label": "%{Type Id}",
+												"description": null,
+												"type": "text",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": true,
+												"textType": null,
+												"bindings": {},
+												"validationSuccessEvent": {
+													"eventFields": [],
+													"name": null
+												}
+											},
+											{
+												"arbitrary": false,
+												"name": "body.rule",
+												"label": "%{Rule}",
+												"description": null,
+												"type": "text",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": false
+											},
+											{
+												"arbitrary": false,
+												"name": "body.priority",
+												"label": "%{Priority}",
+												"description": null,
+												"type": "text",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": false,
+												"textType": "number",
+												"bindings": {},
+												"validationSuccessEvent": {
+													"eventFields": [],
+													"name": null
+												}
+											},
+											{
+												"arbitrary": false,
+												"name": "body.description",
+												"label": "%{Description}",
+												"description": null,
+												"type": "text",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": false,
+												"textType": "area",
+												"bindings": {},
+												"validationSuccessEvent": {
+													"eventFields": [],
+													"name": null
+												}
+											},
+											{
+												"arbitrary": false,
+												"name": "body.multiple",
+												"label": "%{Multiple}",
+												"description": null,
+												"type": "switch",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": false
+											}
+										]
+									}
+								],
+								"class": null,
+								"ok": "Ok",
+								"edit": "Edit",
+								"next": "Next",
+								"cancel": "Cancel",
+								"event": "updatedSignalRule",
+								"synchronize": true,
+								"operation": "nabu.frameworks.signals.manage.crud.signalRule.services.update",
+								"mode": "component"
+							},
+							"target": "prompt",
+							"on": "updateSignalRule",
+							"class": null,
+							"customId": null,
+							"width": 1,
+							"height": null,
+							"instances": {},
+							"condition": null,
+							"devices": [],
+							"clickEvent": null,
+							"$$initialize": null,
+							"cellState": {
+								"form": {
+									"properties": {
+										"id": {
+											"in": "path",
+											"required": true,
+											"name": "id",
+											"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}",
+											"type": "string",
+											"format": "uuid"
+										},
+										"body": {
+											"type": "object",
+											"required": [
+												"name",
+												"priority",
+												"multiple",
+												"disabled"
+											],
+											"properties": {
+												"rule": {
+													"description": "The actual rule, it can be optional but then type should be filled in.",
+													"type": "string"
+												},
+												"typeId": {
+													"description": "You can optionally limit a rule to a specific data type.",
+													"type": "string"
+												},
+												"name": {
+													"description": "A custom name for this rule",
+													"type": "string"
+												},
+												"description": {
+													"description": "A custom description",
+													"type": "string"
+												},
+												"parentId": {
+													"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}",
+													"description": "The parent rule",
+													"type": "string",
+													"format": "uuid"
+												},
+												"priority": {
+													"description": "The priority of the rule within a selection",
+													"type": "integer",
+													"format": "int64"
+												},
+												"multiple": {
+													"description": "Allow multiple matches. If turned on the execution will continue.",
+													"type": "boolean"
+												},
+												"disabled": {
+													"description": "You can soft delete a rule.",
+													"type": "boolean"
+												},
+												"ownerId": {
+													"description": "Allow for owned rules so it can be used at the application level. This should be the authentication id.",
+													"type": "string"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"class": null,
+					"customId": null,
+					"instances": {},
+					"condition": null,
+					"direction": null,
+					"align": null,
+					"on": null,
+					"collapsed": false,
+					"name": null
+				},
+				{
+					"id": 9,
+					"cells": [
+						{
+							"id": 10,
+							"rows": [],
+							"alias": "data-table-list",
+							"bindings": {
+								"limit": null,
+								"offset": null,
+								"orderBy": null,
+								"signalRuleId": "showSubscribers.id",
+								"properties": null
+							},
+							"name": null,
+							"state": {
+								"autoRefresh": null,
+								"orderBy": [],
+								"filterPlaceHolder": null,
+								"filterType": "data-combo-filter",
+								"title": "Signal Subscriptions",
+								"limit": 10,
+								"actions": [
+									{
+										"name": "deleteSignalSubscription",
+										"icon": "fa-times",
+										"class": "danger",
+										"label": null,
+										"condition": null,
+										"refresh": true,
+										"global": false,
+										"close": false,
+										"type": "button",
+										"useSelection": false
+									},
+									{
+										"name": "createSignalSubscription",
+										"global": true,
+										"label": "%{Add Subscription}",
+										"type": "button",
+										"class": "primary"
+									}
+								],
+								"filters": [],
+								"fields": [
+									{
+										"label": "%{Name}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "name",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Service}",
+										"info": null,
+										"infoIcon": null,
+										"fragments": [
+											{
+												"type": "data",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"key": "serviceId",
+												"disabled": null,
+												"hidden": null,
+												"form": {},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null
+											}
+										],
+										"hidden": null,
+										"styles": [],
+										"arbitrary": false
+									}
+								],
+								"updateOperation": null,
+								"updateBindings": {},
+								"multiselect": false,
+								"styles": [],
+								"refreshOn": [
+									"createdSignalSubscription"
+								],
+								"showRefresh": false,
+								"result": {
+									"id": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"signalRuleId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"signalSubscriberId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"description": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"name": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"serviceId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									}
+								},
+								"operation": "nabu.frameworks.signals.manage.crud.signalSubscription.services.listByRule",
+								"comboFilter": {
+									"useTags": true
+								},
+								"useNativeTable": true,
+								"emptyPlaceholder": "No subscriptions yet"
+							},
+							"target": "sidebar",
+							"on": "showSubscribers",
+							"class": null,
+							"customId": null,
+							"width": 1,
+							"height": null,
+							"instances": {},
+							"condition": null,
+							"devices": [],
+							"clickEvent": {
+								"eventFields": [],
+								"name": null
+							},
+							"$$initialize": null,
+							"result": {},
+							"preventAutoClose": true
+						}
+					],
+					"class": null,
+					"customId": null,
+					"instances": {},
+					"condition": null,
+					"direction": null,
+					"align": null,
+					"on": null,
+					"collapsed": false,
+					"name": null
+				},
+				{
+					"id": 13,
+					"cells": [
+						{
+							"id": 14,
+							"rows": [],
+							"alias": "page-form",
+							"bindings": {
+								"body.signalRuleId": "createSignalSubscription.id",
+								"body.signalSubscriberId": null
+							},
+							"name": null,
+							"state": {
+								"title": "%{Add Signal Subscription}",
+								"immediate": false,
+								"pages": [
+									{
+										"name": "Form Fields",
+										"title": null,
+										"fields": [
+											{
+												"arbitrary": false,
+												"name": "body.signalSubscriberId",
+												"label": "%{Signal Subscriber}",
+												"description": null,
+												"type": "enumeration-operation",
+												"enumerations": [],
+												"value": null,
+												"group": null,
+												"joinGroup": false,
+												"enumerationOperation": "nabu.frameworks.signals.manage.crud.signalSubscriber.services.list",
+												"enumerationOperationLabel": "name",
+												"enumerationOperationValue": "id",
+												"enumerationOperationQuery": "name",
+												"enumerationProvider": null,
+												"enumerationOperationBinding": {},
+												"validationSuccessEvent": {
+													"eventFields": [],
+													"name": null
+												},
+												"enumerationOperationResolve": "id"
+											}
+										]
+									}
+								],
+								"class": null,
+								"ok": "Ok",
+								"edit": "Edit",
+								"next": "Next",
+								"cancel": "Cancel",
+								"event": "createdSignalSubscription",
+								"synchronize": false,
+								"operation": "nabu.frameworks.signals.manage.crud.signalSubscription.services.create",
+								"mode": "component"
+							},
+							"target": "prompt",
+							"on": "createSignalSubscription",
+							"class": null,
+							"customId": null,
+							"width": 1,
+							"height": null,
+							"instances": {},
+							"condition": null,
+							"devices": [],
+							"clickEvent": null,
+							"$$initialize": null,
+							"cellState": {
+								"form": {
+									"properties": {
+										"body": {
+											"type": "object",
+											"required": [
+												"signalRuleId",
+												"signalSubscriberId"
+											],
+											"properties": {
+												"signalRuleId": {
+													"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}",
+													"type": "string",
+													"format": "uuid"
+												},
+												"signalSubscriberId": {
+													"pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}",
+													"type": "string",
+													"format": "uuid"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"class": null,
+					"customId": null,
+					"instances": {},
+					"condition": null,
+					"direction": null,
+					"align": null,
+					"on": null,
+					"collapsed": false,
+					"name": null
+				},
+				{
+					"id": 15,
+					"cells": [
+						{
+							"id": 16,
+							"rows": [],
+							"alias": "data-table-list",
+							"bindings": {
+								"limit": null,
+								"offset": null,
+								"orderBy": null,
+								"signalInstanceId": "showSignalSubscriptions.signalInstanceId",
+								"properties": null,
+								"signalRuleId": "showSignalSubscriptions.signalRuleId"
+							},
+							"name": null,
+							"state": {
+								"autoRefresh": null,
+								"orderBy": [
+									"name"
+								],
+								"filterPlaceHolder": null,
+								"filterType": "data-combo-filter",
+								"title": "Triggered Subscribers",
+								"limit": 10,
+								"actions": [],
+								"filters": [],
+								"fields": [
+									{
+										"label": "%{Name}",
+										"fragments": [
+											{
+												"type": "data",
+												"key": "name",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"form": {}
+											}
+										],
+										"styles": [],
+										"hidden": null
+									},
+									{
+										"label": "%{Service}",
+										"info": null,
+										"infoIcon": null,
+										"fragments": [
+											{
+												"type": "data",
+												"content": null,
+												"format": null,
+												"javascript": null,
+												"template": null,
+												"class": null,
+												"key": "serviceId",
+												"disabled": null,
+												"hidden": null,
+												"form": {},
+												"dateFormat": null,
+												"tag": null,
+												"html": null,
+												"amountOfDecimals": null
+											}
+										],
+										"hidden": null,
+										"styles": [],
+										"arbitrary": false
+									}
+								],
+								"updateOperation": null,
+								"updateBindings": {},
+								"multiselect": false,
+								"styles": [],
+								"refreshOn": [],
+								"showRefresh": false,
+								"result": {
+									"created": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"description": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"id": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"input": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"name": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"output": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"signalInstanceId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"signalSubscriberId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"serviceId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									},
+									"signalRuleId": {
+										"label": null,
+										"format": null,
+										"custom": null,
+										"styles": []
+									}
+								},
+								"operation": "nabu.frameworks.signals.manage.crud.signalInstanceSubscription.services.listByRule",
+								"comboFilter": {
+									"useTags": true
+								},
+								"useNativeTable": true,
+								"emptyPlaceholder": "No subscribers triggered"
+							},
+							"target": "sidebar",
+							"on": "showSignalSubscriptions",
+							"class": null,
+							"customId": null,
+							"width": 1,
+							"height": null,
+							"instances": {},
+							"condition": null,
+							"devices": [],
+							"clickEvent": {
+								"eventFields": [],
+								"name": null
+							},
+							"$$initialize": null,
+							"result": {}
+						}
+					],
+					"class": null,
+					"customId": null,
+					"instances": {},
+					"condition": null,
+					"direction": null,
+					"align": null,
+					"on": null,
+					"collapsed": false,
+					"name": null
+				}
+			],
+			"path": "/signal/rules",
+			"counter": 17,
+			"variables": [],
+			"query": [
+				"parentId"
+			],
+			"actions": [
+				{
+					"name": "Show Child Rules",
+					"on": "showChildRules",
+					"confirmation": null,
+					"operation": null,
+					"route": "signal-rules",
+					"event": null,
+					"anchor": null,
+					"bindings": {
+						"parentId": "showChildRules.id"
+					},
+					"expandBindings": true,
+					"chainEvent": {
+						"eventFields": [],
+						"name": null
+					}
+				},
+				{
+					"name": "Delete Subscription",
+					"on": "deleteSignalSubscription",
+					"confirmation": "Are you sure you want to delete this subscription?",
+					"operation": "nabu.frameworks.signals.manage.crud.signalSubscription.services.delete",
+					"route": null,
+					"event": null,
+					"anchor": null,
+					"bindings": {
+						"id": "deleteSignalSubscription.id"
+					},
+					"expandBindings": true,
+					"chainEvent": {
+						"eventFields": [],
+						"name": null
+					}
+				},
+				{
+					"name": "Go back to parent",
+					"on": "backToParent",
+					"confirmation": null,
+					"operation": null,
+					"route": "signal-rules",
+					"event": null,
+					"anchor": null,
+					"bindings": {},
+					"expandBindings": true,
+					"chainEvent": {
+						"eventFields": [],
+						"name": null
+					}
+				}
+			],
+			"class": null,
+			"initial": false,
+			"menuX": 0,
+			"menuY": 0,
+			"states": [],
+			"category": "Signalling",
+			"slow": false,
+			"name": "signal-rules"
+		}
+	}
+}
