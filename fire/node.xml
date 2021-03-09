@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-03-05T13:19:17.663+01:00" lastModified="2021-03-08T15:55:12.041+01:00" leaf="true" version="16">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-03-05T13:19:17.663+01:00" lastModified="2021-03-09T09:07:53.401+01:00" leaf="true" version="21">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
     <references>nabu.frameworks.signals.crud.signalInstance.services.create</references>
     <references>nabu.frameworks.signals.services.getConnectionId</references>
+    <references>nabu.utils.reflection.Type.inspect</references>
     <references>nabu.utils.Runtime.getCurrentToken</references>
     <references>nabu.frameworks.signals.crud.signalInstance.types.createOutput</references>
-    <references>nabu.utils.reflection.Type.of</references>
     <references>nabu.frameworks.signals.crud.signalRule.services.list</references>
     <references>java.lang.Object</references>
     <references>java.lang.String</references>
+    <references>nabu.utils.types.TypeInspection</references>
     <references>nabu.data.json.Services.marshal</references>
     <references>nabu.frameworks.signals.crud.signalRule.types.output</references>
     <references>nabu.frameworks.signals.services.evaluateRules</references>

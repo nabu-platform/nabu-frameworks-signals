@@ -157,7 +157,7 @@
 							optional="false"
 							fixedValue="false">
 						<from>input/typeId</from>
-						<to>filter/typeId[0]</to>
+						<to>filter/typeId</to>
 					</steps>
 					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 							disabled="false"
@@ -276,6 +276,6 @@
 				<count>1</count>
 			</steps>
 		</steps>
-		<query>input/rules[typeId = null || typeId = /input/typeId]</query>
+		<query>input/rules[typeId = null || typeId # /input/typeId]</query>
 	</steps>
 </sequence>

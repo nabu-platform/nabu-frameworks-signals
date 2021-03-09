@@ -11,13 +11,22 @@
         <or>false</or>
         <input>true</input>
     </filters>
-    <filters>
-        <caseInsensitive>false</caseInsensitive>
-        <key>signalRuleId</key>
-        <operator>=</operator>
-        <or>false</or>
-        <input>true</input>
-    </filters>
+    <foreignFields>
+        <foreignName>signalRuleId:name</foreignName>
+        <localName>ruleName</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalSubscriberId:name</foreignName>
+        <localName>subscriberName</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalRuleId:ruleIndex</foreignName>
+        <localName>ruleIndex</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalSubscriberId:serviceId</foreignName>
+        <localName>serviceId</localName>
+    </foreignFields>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
     <updateRole>$user</updateRole>
@@ -51,6 +60,52 @@
             <localName>serviceId</localName>
         </foreignFields>
         <name>By Rule</name>
+        <type>LIST</type>
+    </views>
+    <views>
+        <filters>
+            <caseInsensitive>false</caseInsensitive>
+            <key>signalSubscriberId</key>
+            <operator>=</operator>
+            <or>false</or>
+            <input>true</input>
+        </filters>
+        <filters>
+            <caseInsensitive>false</caseInsensitive>
+            <key>signalRuleId</key>
+            <operator>=</operator>
+            <or>false</or>
+            <input>true</input>
+        </filters>
+        <foreignFields>
+            <foreignName>signalRuleId:name</foreignName>
+            <localName>name</localName>
+        </foreignFields>
+        <foreignFields>
+            <foreignName>signalRuleId:typeId</foreignName>
+            <localName>typeId</localName>
+        </foreignFields>
+        <foreignFields>
+            <foreignName>signalRuleId:rule</foreignName>
+            <localName>rule</localName>
+        </foreignFields>
+        <foreignFields>
+            <foreignName>signalRuleId:ruleIndex</foreignName>
+            <localName>ruleIndex</localName>
+        </foreignFields>
+        <foreignFields>
+            <foreignName>signalInstanceId:alias</foreignName>
+            <localName>alias</localName>
+        </foreignFields>
+        <foreignFields>
+            <foreignName>signalInstanceId:realm</foreignName>
+            <localName>realm</localName>
+        </foreignFields>
+        <foreignFields>
+            <foreignName>signalInstanceId:created</foreignName>
+            <localName>occurred</localName>
+        </foreignFields>
+        <name>By Subscriber</name>
         <type>LIST</type>
     </views>
 </crud>

@@ -9,8 +9,8 @@
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalSubscriber</type>
-        <x>667</x>
-        <y>295</y>
+        <x>690</x>
+        <y>635</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
@@ -27,13 +27,13 @@
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalInstanceRule</type>
-        <x>140</x>
-        <y>417</y>
+        <x>40</x>
+        <y>413</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalInstanceSubscription</type>
-        <x>604</x>
-        <y>658</y>
+        <x>735</x>
+        <y>335</y>
     </entries>
 </dataModel>
