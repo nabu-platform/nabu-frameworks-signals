@@ -6,4 +6,7 @@
     <field comment="The authentication id of the system/person that triggered this" minOccurs="0" name="authenticationId" type="java.lang.String"/>
     <field identifiable="true" minOccurs="0" name="alias" type="java.lang.String"/>
     <field minOccurs="0" name="realm" type="java.lang.String"/>
+    <field minOccurs="0" name="correlationId" type="java.lang.String"/>
+    <field minOccurs="0" name="groupId" type="java.lang.String"/>
+    <field minOccurs="0" name="contextId" type="java.lang.String"/>
 </structure>

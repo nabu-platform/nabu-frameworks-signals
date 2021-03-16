@@ -119,6 +119,33 @@
 					<from>inspection/id</from>
 					<to>instance/typeId</to>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="ed2e2e55-6957-4ee6-b06c-1fd1692fdc9f"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/correlationId</from>
+					<to>instance/correlationId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="75c0d2ec-a394-4ffa-b59c-22e42af4a2e3"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/groupId</from>
+					<to>instance/groupId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="1ea5b9c0-27fb-40e5-b5f7-04d5bd6262aa"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/contextId</from>
+					<to>instance/contextId</to>
+				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 					disabled="false"
@@ -156,8 +183,8 @@
 					serviceId="nabu.utils.Runtime.getCurrentToken"
 					resultName="resultea393a359e02442fb4ef6149cbeb23fc"
 					temporaryMapping="true"
-					x="31"
-					y="330"
+					x="40"
+					y="460"
 					invocationOrder="0"
 					asynchronous="false"
 					recache="false">

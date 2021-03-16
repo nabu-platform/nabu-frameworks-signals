@@ -1,6 +1,9 @@
 <structure name="pipeline">
     <structure name="input">
         <structure definition="java.lang.Object" name="signal"/>
+        <field minOccurs="0" name="correlationId" type="java.lang.String"/>
+        <field minOccurs="0" name="groupId" type="java.lang.String"/>
+        <field minOccurs="0" name="contextId" type="java.lang.String"/>
     </structure>
     <structure name="output"/>
     <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" maxOccurs="unbounded" minOccurs="0" name="rules"/>

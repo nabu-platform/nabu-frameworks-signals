@@ -30,6 +30,10 @@
         <foreignName>signalSubscriberId:disabled</foreignName>
         <localName>disabled</localName>
     </foreignFields>
+    <foreignFields>
+        <foreignName>signalSubscriberId:name</foreignName>
+        <localName>subscriberName</localName>
+    </foreignFields>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
     <updateRole>$user</updateRole>

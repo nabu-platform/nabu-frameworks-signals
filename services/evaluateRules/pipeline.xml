@@ -10,4 +10,5 @@
     <field name="response" type="java.lang.Boolean"/>
     <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" maxOccurs="unbounded" minOccurs="0" name="children"/>
     <field name="amountOfChildren" nillable="false" type="java.lang.Integer"/>
+    <structure definition="nabu.frameworks.signals.services.evaluationContext" name="context"/>
 </structure>

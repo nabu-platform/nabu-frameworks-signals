@@ -177,6 +177,51 @@
 					<from>result06ffb73f2a504e179c8637979b65d0e5/typeInstance</from>
 					<to>serviceInput</to>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="eaeeb664-019b-4455-8196-a84f4a6952ee"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/typeId[0]</from>
+					<to>context/$typeId</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="06f854cb-01a6-4dbd-8be4-d2fc653e6db5"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/signal</from>
+					<to>context/$signal</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="a07ddbf7-b9de-4364-bac8-897a571ff90f"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/rule/name</from>
+					<to>context/$rule</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="60fee05c-0a66-4f9b-bdc3-9b2f3314262b"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/rule/ruleIndex</from>
+					<to>context/$index</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="f5cffc54-3f7a-4ba8-9b42-95b41ca4317a"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>subscription/subscriberName</from>
+					<to>context/$subscriber</to>
+				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.For"
 					disabled="false"
@@ -185,21 +230,6 @@
 				<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
 						disabled="false"
 						id="0ad19595-103c-4b1b-80c2-bcc63468f23d">
-					<steps xsi:type="be.nabu.libs.services.vm.step.Map"
-							comment="If you ask for the signal itself, send that"
-							disabled="false"
-							id="57626cf18df44ba3be3874447484d0d2"
-							label="property/value = &quot;=$signal&quot;">
-						<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-								disabled="false"
-								id="179035eb-6e28-4a3e-ab23-4c746778156b"
-								mask="false"
-								optional="false"
-								fixedValue="false">
-							<from>input/signal</from>
-							<to>propertyValue</to>
-						</steps>
-					</steps>
 					<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 							comment="If we have a formula, execute it"
 							disabled="false"
@@ -257,12 +287,21 @@
 							</steps>
 							<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 									disabled="false"
-									id="99b2a7e6-602f-49b7-8bf0-3869f4f46af1"
+									id="da22c0dc-9343-44f0-8f49-ff11578963b0"
 									mask="false"
 									optional="false"
 									fixedValue="false">
 								<from>input/signal</from>
-								<to>context</to>
+								<to>context[1]</to>
+							</steps>
+							<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+									disabled="false"
+									id="2f9d79bb-fd9a-4b16-bd91-83a341fa8da2"
+									mask="false"
+									optional="false"
+									fixedValue="false">
+								<from>context</from>
+								<to>context[0]</to>
 							</steps>
 						</steps>
 						<steps xsi:type="be.nabu.libs.services.vm.step.Link"

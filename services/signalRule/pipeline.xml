@@ -4,6 +4,7 @@
         <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" name="rule"/>
         <structure definition="java.lang.Object" name="signal"/>
         <field name="signalInstanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+        <field maxOccurs="unbounded" minOccurs="0" name="typeId" type="java.lang.String"/>
     </structure>
     <structure name="output"/>
     <structure collectionName="signalSubscription" definition="nabu.frameworks.signals.crud.signalSubscription.types.output" maxOccurs="unbounded" minOccurs="0" name="subscriptions"/>
@@ -13,4 +14,5 @@
     <structure definition="java.lang.Object" minOccurs="0" name="serviceOutput"/>
     <field name="serviceOutputMarshalled" type="java.lang.String"/>
     <structure definition="java.lang.Object" minOccurs="0" name="propertyValue"/>
+    <structure definition="nabu.frameworks.signals.services.evaluationContext" name="context"/>
 </structure>

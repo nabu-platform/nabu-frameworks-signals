@@ -5,6 +5,47 @@
 			disabled="false"
 			id="b9bc694d-6061-4c4a-8532-874a52c0fc58"
 			variable="rule">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="Map the evaluation context"
+				disabled="false"
+				id="01baca9b-8c72-4d78-be37-d4296c8e3c01">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="efe03780-3714-4003-887a-7e1e2c199e21"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/typeId[0]</from>
+				<to>context/$typeId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="6c6f9323-1c0d-4d82-85ad-92b77dfed911"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>rule/ruleIndex</from>
+				<to>context/$index</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="d95d9a87-8deb-4816-9a9f-b1ec1aad1cba"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>rule/name</from>
+				<to>context/$rule</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="c7816be9-99d7-49e9-9efd-cdca7bd2b9fc"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/signal</from>
+				<to>context/$signal</to>
+			</steps>
+		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
 				disabled="false"
 				id="03ba77bb-ed2a-4304-a707-d1b775093fb2"
@@ -40,21 +81,30 @@
 						recache="false">
 					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 							disabled="false"
-							id="3399bf18-5de8-4f99-a42f-9c71841070f7"
-							mask="false"
-							optional="false"
-							fixedValue="false">
-						<from>input/signal</from>
-						<to>context</to>
-					</steps>
-					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-							disabled="false"
 							id="2edcb81c-a1d6-448c-9b5f-0560b5e4ed48"
 							mask="false"
 							optional="false"
 							fixedValue="false">
 						<from>rule/rule</from>
 						<to>rule</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="fd235e07-178b-4ec8-89ee-bdba486eed31"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/signal</from>
+						<to>context[1]</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="bbcacf27-3385-410c-83ed-9eab33c77392"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>context</from>
+						<to>context[0]</to>
 					</steps>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
@@ -124,6 +174,15 @@
 						<from>input/signalInstanceId</from>
 						<to>signalInstanceId</to>
 					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="930a459d-96e3-46c5-b871-e8c597d3f372"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>input/typeId</from>
+						<to>typeId</to>
+					</steps>
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
@@ -185,6 +244,15 @@
 							fixedValue="true">
 						<from>false</from>
 						<to>filter/disabled</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="8ba81cb3-06dd-4bfd-97ad-64694908ee5c"
+							mask="false"
+							optional="false"
+							fixedValue="true">
+						<from>priority desc</from>
+						<to>orderBy[0]</to>
 					</steps>
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
@@ -273,7 +341,7 @@
 					disabled="false"
 					id="83affab2-e4df-4cfc-84fb-a251698753db"
 					label="rule/multiple != true">
-				<count>1</count>
+				<count>2</count>
 			</steps>
 		</steps>
 		<query>input/rules[typeId = null || typeId # /input/typeId]</query>
