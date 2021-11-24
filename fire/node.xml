@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-03-05T13:19:17.663+01:00" lastModified="2021-03-10T12:06:47.767+01:00" leaf="true" version="23">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-03-05T13:19:17.663+01:00" lastModified="2021-10-08T10:29:02.788+02:00" leaf="true" version="24">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
     <references>nabu.frameworks.signals.crud.signalInstance.services.create</references>
+    <references>nabu.utils.Runtime.getCurrentToken</references>
+    <references>nabu.frameworks.signals.crud.signalRule.services.list</references>
+    <references>nabu.utils.types.TypeInspection</references>
+    <references>nabu.frameworks.signals.services.evaluateRules</references>
     <references>nabu.frameworks.signals.services.getConnectionId</references>
     <references>nabu.utils.reflection.Type.inspect</references>
-    <references>nabu.utils.Runtime.getCurrentToken</references>
     <references>nabu.frameworks.signals.crud.signalInstance.types.createOutput</references>
-    <references>nabu.frameworks.signals.crud.signalRule.services.list</references>
+    <references>nabu.utils.Runtime.getCorrelationId</references>
     <references>java.lang.Object</references>
     <references>java.lang.String</references>
-    <references>nabu.utils.types.TypeInspection</references>
     <references>nabu.data.json.Services.marshal</references>
     <references>nabu.frameworks.signals.crud.signalRule.types.output</references>
-    <references>nabu.frameworks.signals.services.evaluateRules</references>
 </node>

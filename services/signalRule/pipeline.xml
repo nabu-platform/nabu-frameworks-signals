@@ -15,4 +15,8 @@
     <field name="serviceOutputMarshalled" type="java.lang.String"/>
     <structure definition="java.lang.Object" minOccurs="0" name="propertyValue"/>
     <structure definition="nabu.frameworks.signals.services.evaluationContext" name="context"/>
+    <field name="fireSubscription" type="java.lang.Boolean"/>
+    <structure collectionName="signalInstanceSubscriptions" definition="nabu.frameworks.signals.crud.signalInstanceSubscription.types.output" minOccurs="0" name="lastFired"/>
+    <field minOccurs="0" name="before" type="java.util.Date"/>
+    <field comment="The calculated trigger key for this subscription / signal" minOccurs="0" name="triggerKey" type="java.lang.String"/>
 </structure>

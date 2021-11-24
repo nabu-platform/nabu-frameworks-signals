@@ -6,6 +6,33 @@
 			id="535af0c1-c336-42a6-a3e4-33ce33dd36d3"
 			label="input/signal != null">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="Use the generic correlation id if none given"
+				disabled="false"
+				id="4c92408e-c77e-428b-ab37-b585ebd1e4da"
+				label="input/correlationId = null">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="43242c3b-0a75-4f11-865a-0a3e7a97eea7"
+					serviceId="nabu.utils.Runtime.getCorrelationId"
+					resultName="result20c3b208296a4f4f8dc7e92f5a8b564f"
+					temporaryMapping="true"
+					x="165"
+					y="120"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="42e6596a-5a76-4bee-bc70-477f6dd4d56c"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result20c3b208296a4f4f8dc7e92f5a8b564f/correlationId</from>
+				<to>input/correlationId</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 				disabled="false"
 				id="c6313b3c-cabd-4336-9092-6dad7e5188eb">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
