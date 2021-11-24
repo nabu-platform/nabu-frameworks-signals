@@ -837,6 +837,15 @@
 						<from>subscription/id</from>
 						<to>instance/signalSubscriptionId</to>
 					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="f4f775e1-df8b-4c63-a7a2-4a7175f99563"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>triggerKey</from>
+						<to>instance/triggerKey</to>
+					</steps>
 				</steps>
 			</steps>
 		</steps>
