@@ -2,4 +2,5 @@
     <structure name="input"/>
     <structure name="output"/>
     <structure collectionName="signalSubscribers" definition="nabu.frameworks.signals.manage.crud.signalSubscriber.types.output" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    <structure definition="nabu.frameworks.signals.types.propertyList" name="propertyList"/>
 </structure>

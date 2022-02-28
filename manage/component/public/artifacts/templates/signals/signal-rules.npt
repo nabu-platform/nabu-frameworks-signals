@@ -1133,6 +1133,32 @@
 								"hidden": null,
 								"styles": [],
 								"arbitrary": false
+							},
+							{
+								"label": "%{Key}",
+								"info": "The grouping key for triggering (if any)",
+								"infoIcon": null,
+								"fragments": [
+									{
+										"type": "data",
+										"content": null,
+										"format": null,
+										"javascript": null,
+										"template": null,
+										"class": null,
+										"key": "triggerKey",
+										"disabled": null,
+										"hidden": null,
+										"form": {},
+										"dateFormat": null,
+										"tag": null,
+										"html": null,
+										"amountOfDecimals": null
+									}
+								],
+								"hidden": null,
+								"styles": [],
+								"arbitrary": false
 							}
 						],
 						"updateOperation": null,
@@ -1181,6 +1207,12 @@
 								"styles": []
 							},
 							"triggerInterval": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
+							},
+							"triggerKey": {
 								"label": null,
 								"format": null,
 								"custom": null,
@@ -1283,6 +1315,25 @@
 										"bindings": {},
 										"suffixIcon": null,
 										"info": "If configured, the subscription will only trigger at least after this interval has passed since the last signal instance."
+									},
+									{
+										"arbitrary": false,
+										"name": "body.triggerKey",
+										"label": "%{Trigger Key}",
+										"description": null,
+										"type": "text",
+										"enumerations": [],
+										"value": null,
+										"group": null,
+										"joinGroup": false,
+										"validationSuccessEvent": {
+											"eventFields": [],
+											"name": null
+										},
+										"textType": null,
+										"bindings": {},
+										"info": "Without a key, the trigger interval applies to the subscription as a whole. If you fill in a key (which you generally derive from the signal), you can create logical groups",
+										"placeholder": "E.g. =customerId"
 									}
 								]
 							}
@@ -1330,6 +1381,10 @@
 										},
 										"triggerInterval": {
 											"description": "If you set a trigger interval, we will only trigger this subscription this amount of time after it was last triggered.",
+											"type": "string"
+										},
+										"triggerKey": {
+											"description": "An evaluatable rule which extracts a key from the signal. The trigger interval is applied to this key",
 											"type": "string"
 										}
 									}
@@ -1499,6 +1554,12 @@
 								"format": null,
 								"custom": null,
 								"styles": []
+							},
+							"triggerKey": {
+								"label": null,
+								"format": null,
+								"custom": null,
+								"styles": []
 							}
 						},
 						"operation": "nabu.frameworks.signals.manage.crud.signalInstanceSubscription.services.listByRule",
@@ -1546,7 +1607,8 @@
 						"id": "updateSignalSubscription.id",
 						"body.signalRuleId": "updateSignalSubscription.signalRuleId",
 						"body.signalSubscriberId": "updateSignalSubscription.signalSubscriberId",
-						"body.triggerInterval": "updateSignalSubscription.triggerInterval"
+						"body.triggerInterval": "updateSignalSubscription.triggerInterval",
+						"body.triggerKey": "updateSignalSubscription.triggerKey"
 					},
 					"name": null,
 					"state": {
@@ -1574,6 +1636,25 @@
 											"name": null
 										},
 										"placeholder": "E.g. P1D"
+									},
+									{
+										"arbitrary": false,
+										"name": "body.triggerKey",
+										"label": "%{Trigger Key}",
+										"description": null,
+										"type": "text",
+										"enumerations": [],
+										"value": null,
+										"group": null,
+										"joinGroup": false,
+										"validationSuccessEvent": {
+											"eventFields": [],
+											"name": null
+										},
+										"textType": null,
+										"bindings": {},
+										"info": "Without a key, the trigger interval applies to the subscription as a whole. If you fill in a key (which you generally derive from the signal), you can create logical groups",
+										"placeholder": "E.g. =customerId"
 									}
 								]
 							}
@@ -1629,6 +1710,10 @@
 										},
 										"triggerInterval": {
 											"description": "If you set a trigger interval, we will only trigger this subscription this amount of time after it was last triggered.",
+											"type": "string"
+										},
+										"triggerKey": {
+											"description": "An evaluatable rule which extracts a key from the signal. The trigger interval is applied to this key",
 											"type": "string"
 										}
 									}

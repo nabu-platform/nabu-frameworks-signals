@@ -1,10 +1,13 @@
 <sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		disabled="false"
-		id="4f4fe066-51fc-4794-a9d5-9e0a188436d7">
+		id="4f4fe066-51fc-4794-a9d5-9e0a188436d7"
+		lineNumber="1">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Map the list"
 			disabled="false"
-			id="0aeabd6f-72a3-48b3-a3e2-08e6a985f407">
+			id="0aeabd6f-72a3-48b3-a3e2-08e6a985f407"
+			label="input/content/properties"
+			lineNumber="2">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 				disabled="false"
 				id="988c9cf9-1b5f-4aac-ac6f-11f98ee09547"
@@ -18,7 +21,8 @@
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="7ebd6fb1-d810-45a1-abb0-ab84a3b48ce7"
-			label="list">
+			label="list"
+			lineNumber="3">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="0faa7a43-a84d-4776-a019-3c01c216e534"
@@ -61,7 +65,8 @@
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
-			id="787e4a74-d311-4fa3-afdf-6b7c72eec0ef">
+			id="787e4a74-d311-4fa3-afdf-6b7c72eec0ef"
+			lineNumber="4">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="8df81225-5c4e-4e05-a641-06f6e7d2d9a0"

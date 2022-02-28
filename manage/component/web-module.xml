@@ -10,4 +10,5 @@
     <webFragments>nabu.frameworks.signals.manage.rest.subscriber.list</webFragments>
     <webFragments>nabu.frameworks.signals.manage.rest.subscriber.listProperties</webFragments>
     <webFragments>nabu.frameworks.signals.manage.rest.subscriber.update</webFragments>
+    <audience>MANAGER</audience>
 </webModule>
