@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2021-03-05T16:55:45.303+01:00" lastModified="2022-04-27T16:15:57.960+02:00" leaf="true" version="31">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <properties/>
+    <references>nabu.frameworks.signals.types.propertyList</references>
+    <references>nabu.frameworks.signals.manage.crud.signalSubscription.services.listByRule</references>
+    <references>nabu.frameworks.signals.manage.crud.signalSubscription.types.outputByRule</references>
+    <references>nabu.data.json.Services.unmarshal</references>
+    <references>nabu.frameworks.signals.manage.rest.subscription.subscriptionList</references>
+</node>

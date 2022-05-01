@@ -1,5 +1,6 @@
-<structure name="serviceProperyt">
+<structure name="serviceProperty">
     <field name="key" type="java.lang.String"/>
     <field name="label" type="java.lang.String"/>
     <field name="type" type="java.lang.String"/>
+    <field minOccurs="0" name="placeholder" type="java.lang.String"/>
 </structure>

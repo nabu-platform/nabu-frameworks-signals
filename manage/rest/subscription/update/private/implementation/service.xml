@@ -1,0 +1,137 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="178171f1-10f2-4a6b-b0af-c463ddda3b3c"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Map the list"
+			disabled="false"
+			id="0aeabd6f-72a3-48b3-a3e2-08e6a985f407"
+			label="input/content/properties"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="988c9cf9-1b5f-4aac-ac6f-11f98ee09547"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/properties</from>
+			<to>list/properties</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="7ebd6fb1-d810-45a1-abb0-ab84a3b48ce7"
+			label="list"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="0faa7a43-a84d-4776-a019-3c01c216e534"
+				serviceId="nabu.data.json.Services.marshal"
+				resultName="resulte083fecd88e94f208d117a41db96e08b"
+				temporaryMapping="true"
+				x="94"
+				y="87"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="e0661004-6895-4438-b630-de4e0ad9334b"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>list</from>
+				<to>data</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="bc06d495-bdc0-4c04-8b16-8ad8810320e8"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>true</from>
+				<to>prettyPrint</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="4c506449-4d53-43e1-8e78-bb2efd6d0975"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resulte083fecd88e94f208d117a41db96e08b/marshalled</from>
+			<to>listMarshalled</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="61007e73-9b77-41e8-aa25-cb76b827d54d"
+			lineNumber="4">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="1e7bd510-c86e-4886-99fd-12f269cbfc9e"
+				serviceId="nabu.frameworks.signals.manage.crud.signalSubscription.services.update"
+				resultName="resulta9345e55f4cc41fab4330e7d6bea5411"
+				temporaryMapping="true"
+				x="171"
+				y="75"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="54718b7c-531c-49d4-9e09-8eb21b36363d"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/content/signalRuleId</from>
+				<to>instance/signalRuleId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="24b00c57-3cdd-41c3-83da-9b7cbb50e263"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/content/signalSubscriberId</from>
+				<to>instance/signalSubscriberId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="1d5d1809-b3f3-4421-8550-056542f28116"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/content/triggerInterval</from>
+				<to>instance/triggerInterval</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="1fd1e987-8547-423a-a8ad-1efc6d0e0d58"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/content/triggerKey</from>
+				<to>instance/triggerKey</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="0f0e0197-d142-4dda-a409-7f1340e3deb2"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>listMarshalled</from>
+				<to>instance/input</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="3007b94c-9949-41ec-b696-0aba2db636b3"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/subscriptionId</from>
+				<to>id</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

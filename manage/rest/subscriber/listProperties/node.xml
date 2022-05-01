@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2021-03-08T13:26:11.393+01:00" lastModified="2021-03-08T13:39:42.129+01:00" leaf="true" version="8">
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2021-03-08T13:26:11.393+01:00" lastModified="2022-04-27T16:34:40.585+02:00" leaf="true" version="17">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
+    <references>nabu.frameworks.signals.manage.crud.signalSubscriber.types.output</references>
+    <references>nabu.frameworks.signals.manage.crud.signalSubscriber.services.get</references>
+    <references>nabu.frameworks.signals.types.propertyList</references>
     <references>nabu.utils.types.ParameterDescription</references>
     <references>nabu.utils.String.conventionize</references>
+    <references>nabu.data.json.Services.unmarshal</references>
     <references>nabu.frameworks.signals.manage.rest.subscriber.servicePropertyList</references>
     <references>nabu.utils.reflection.Type.describe</references>
+    <references>nabu.frameworks.signals.manage.rest.subscriber.serviceProperty</references>
 </node>

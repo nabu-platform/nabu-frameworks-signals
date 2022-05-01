@@ -1,0 +1,49 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="6ad673d0-be29-4397-b654-476135ce83aa"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="7aab2163-e877-4214-96d2-418ee1dd52c5"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="c5ea13a2-3a87-46bf-a97f-7cb49363497c"
+				serviceId="nabu.frameworks.signals.services.fireWithType"
+				resultName="result6b2d9de139d14ea3b763426cb709d7ab"
+				temporaryMapping="true"
+				x="133"
+				y="130"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="0d9aa8e1-94ed-40bd-a518-3aefbab178c3"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/input</from>
+				<to>signal</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="2e857b56-2804-4e7b-92b8-51ca70798488"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>=input/hook + ":input"</from>
+				<to>typeId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="9bd0f6ad-259d-4a5d-9db7-652050a7d067"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>=input/hook + ":input"</from>
+				<to>hierarchy[0]</to>
+			</steps>
+		</steps>
+	</steps>
+</sequence>

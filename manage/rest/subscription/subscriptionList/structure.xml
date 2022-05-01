@@ -1,0 +1,4 @@
+<structure name="subscriptionList">
+    <structure definition="nabu.frameworks.signals.manage.rest.subscription.subscription" maxOccurs="unbounded" minOccurs="0" name="subscriptions" restrict="input"/>
+    <structure definition="be.nabu.eai.module.services.crud.Page" minOccurs="0" name="page"/>
+</structure>

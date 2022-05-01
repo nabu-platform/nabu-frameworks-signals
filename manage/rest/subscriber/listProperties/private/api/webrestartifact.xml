@@ -2,6 +2,7 @@
 <restInterface>
     <method>GET</method>
     <path>/signal/subscriberServiceProperties/{serviceId}</path>
+    <queryParameters>subscriberId</queryParameters>
     <role>$user</role>
     <output>nabu.frameworks.signals.manage.rest.subscriber.servicePropertyList</output>
     <lenient>true</lenient>
@@ -20,4 +21,7 @@
     <allowRaw>false</allowRaw>
     <domain>false</domain>
     <ignoreOffline>false</ignoreOffline>
+    <allowRootArrays>false</allowRootArrays>
+    <captureErrors>false</captureErrors>
+    <captureSuccessful>false</captureSuccessful>
 </restInterface>

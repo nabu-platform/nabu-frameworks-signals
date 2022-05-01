@@ -1,0 +1,4 @@
+<structure interface="be.nabu.eai.module.services.iface.HookListener.fire" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+</structure>

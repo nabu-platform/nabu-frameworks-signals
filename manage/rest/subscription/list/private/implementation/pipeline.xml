@@ -1,0 +1,6 @@
+<structure interface="nabu.frameworks.signals.manage.rest.subscription.list:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure definition="nabu.frameworks.signals.types.propertyList" name="propertyList"/>
+    <structure collectionName="signalSubscriptions" definition="nabu.frameworks.signals.manage.crud.signalSubscription.types.outputByRule" maxOccurs="unbounded" minOccurs="0" name="results"/>
+</structure>
