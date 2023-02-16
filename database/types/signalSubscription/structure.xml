@@ -5,4 +5,5 @@
     <field comment="If you set a trigger interval, we will only trigger this subscription this amount of time after it was last triggered." minOccurs="0" name="triggerInterval" type="be.nabu.libs.types.base.Duration"/>
     <field comment="An evaluatable rule which extracts a key from the signal. The trigger interval is applied to this key" minOccurs="0" name="triggerKey" type="java.lang.String"/>
     <field comment="Additional properties that are set on the input of the service. This will override any properties that might exist in the subscriber." minOccurs="0" name="input" type="java.lang.String"/>
+    <field comment="You can disable a particular subscription to reactivate it later on." minOccurs="0" name="disabled" type="java.lang.Boolean"/>
 </structure>

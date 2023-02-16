@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.data.model.DataModelManager" created="2021-03-05T09:20:56.949+01:00" lastModified="2022-04-27T15:28:22.766+02:00" leaf="true" version="58">
+<node artifactManager="be.nabu.eai.module.data.model.DataModelManager" created="2021-03-05T09:20:56.949+01:00" lastModified="2022-09-30T13:21:23.751+02:00" leaf="true" version="59">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <properties/>
+    <references>nabu.frameworks.signals.database.types.signalRule</references>
+    <references>nabu.frameworks.signals.database.types.signalSubscriber</references>
+    <references>nabu.frameworks.signals.database.types.signalSubscription</references>
+    <references>nabu.frameworks.signals.database.types.signalInstance</references>
+    <references>nabu.frameworks.signals.database.types.signalInstanceRule</references>
+    <references>nabu.frameworks.signals.database.types.signalInstanceSubscription</references>
 </node>
