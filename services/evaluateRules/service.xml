@@ -1,14 +1,17 @@
 <sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		disabled="false"
-		id="f57e1a5e-2e7f-4954-a5e2-3e43848e80e3">
+		id="f57e1a5e-2e7f-4954-a5e2-3e43848e80e3"
+		lineNumber="1">
 	<steps xsi:type="be.nabu.libs.services.vm.step.For"
 			disabled="false"
 			id="b9bc694d-6061-4c4a-8532-874a52c0fc58"
+			lineNumber="2"
 			variable="rule">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 				comment="Map the evaluation context"
 				disabled="false"
-				id="01baca9b-8c72-4d78-be37-d4296c8e3c01">
+				id="01baca9b-8c72-4d78-be37-d4296c8e3c01"
+				lineNumber="3">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 					disabled="false"
 					id="efe03780-3714-4003-887a-7e1e2c199e21"
@@ -49,12 +52,14 @@
 		<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
 				disabled="false"
 				id="03ba77bb-ed2a-4304-a707-d1b775093fb2"
+				lineNumber="4"
 				query="rule/rule">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="This defaults to true but assumes the type id is filled in"
 					disabled="false"
 					id="129154b8-6250-4d47-ba69-7d6649b8d4eb"
-					label="null">
+					label="null"
+					lineNumber="5">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
 						id="fb17ca95-2742-4bfb-96c1-16dc205585dc"
@@ -67,7 +72,8 @@
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					disabled="false"
-					id="9597c419-076f-4c20-8e05-7e898f7e6f1b">
+					id="9597c419-076f-4c20-8e05-7e898f7e6f1b"
+					lineNumber="6">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="2c35dd01-a552-4aab-bf92-c3c4822e6345"
@@ -118,15 +124,87 @@
 				</steps>
 			</steps>
 		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="If we have a rule at the definition layer, we need to check that as well"
+				disabled="false"
+				id="e8857664079e43b78cf832a127faf34f"
+				label="rule/signalDefinitionRule != null"
+				lineNumber="7">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="b861deccf941448d9e95ef485c177051"
+					serviceId="nabu.services.glue.Services.evaluate"
+					resultName="result768dbbc3d2e8494c8d363763197ec9c5"
+					temporaryMapping="true"
+					x="36"
+					y="86"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="4293a97426084ad09892c11bcee2b455"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/signal</from>
+					<to>context[1]</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="44181e9095f64df99d23d67554b01f10"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>context</from>
+					<to>context[0]</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="fd8437c9c6ff4e3fa55a9aae3d8dcc44"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>rule/signalDefinitionRule</from>
+					<to>rule</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="550ef7b05355413daf08e54300e41f5e"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result768dbbc3d2e8494c8d363763197ec9c5/response</from>
+				<to>definitionResult</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="ee287ab313d644569f630477e8a287b5"
+				label="rule/signalDefinitionRule != null &amp;&amp; definitionResult == false"
+				lineNumber="8">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="17b348a2bea247d7b358ae58fb7d8c6d"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>false</from>
+				<to>response</to>
+			</steps>
+		</steps>
 		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
 				comment="If we have a match, check it"
 				disabled="false"
 				id="bf0d1120-792c-4b44-8738-0a27395b1a8e"
-				label="response = true">
+				label="response = true"
+				lineNumber="9">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Signal this rule"
 					disabled="false"
-					id="d4a7f432-5d82-4583-868d-ddd7ebc2b091">
+					id="d4a7f432-5d82-4583-868d-ddd7ebc2b091"
+					lineNumber="10">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="d7e08542-8b5e-4158-8df8-b7ef3b9f68ee"
@@ -188,7 +266,8 @@
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Get child rules"
 					disabled="false"
-					id="18790583-2918-46bb-a578-194d5c2485c3">
+					id="18790583-2918-46bb-a578-194d5c2485c3"
+					lineNumber="11">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="306d789f-8980-481a-826b-df8c6e5ab997"
@@ -276,8 +355,44 @@
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					disabled="false"
+					id="e2398a706d614cc6a9481fb68ed22c14"
+					lineNumber="12">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="749108734cf44d6b9c49c8c44b38f4da"
+						serviceId="nabu.frameworks.signals.services.sortRules"
+						resultName="resultac4493b2e16a4233881090937bb47778"
+						temporaryMapping="true"
+						x="169"
+						y="90"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="3076c17da5744c1898469bdc3543902a"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>children</from>
+						<to>rules</to>
+					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="3adc026505684b1eba77de0517ff6489"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>resultac4493b2e16a4233881090937bb47778/rules</from>
+					<to>children</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
 					id="f82ecdec-e83c-4515-9622-4eb88e56d0c4"
-					label="amountOfChildren &gt; 0">
+					label="amountOfChildren &gt; 0"
+					lineNumber="13">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 						disabled="false"
 						id="ec79d9d2-0bba-4751-956b-2a911db1fd82"
@@ -336,14 +451,27 @@
 					</steps>
 				</steps>
 			</steps>
-			<steps xsi:type="be.nabu.libs.services.vm.step.Break"
+			<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
 					comment="If we don't want to allow multiple matches, stop"
 					disabled="false"
-					id="83affab2-e4df-4cfc-84fb-a251698753db"
-					label="rule/multiple != true">
-				<count>2</count>
+					id="4467b98af28d441992df8f9dc06b3ebc"
+					lineNumber="14">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Break"
+						disabled="false"
+						id="3b9d309c600d49c38ecd0c456f2b9c6e"
+						label="rule/multiple == null &amp;&amp; rule/signalDefinitionDefaultMultiple != true"
+						lineNumber="15">
+					<count>2</count>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Break"
+						disabled="false"
+						id="83affab2-e4df-4cfc-84fb-a251698753db"
+						label="rule/multiple != null &amp;&amp; rule/multiple == false"
+						lineNumber="16">
+					<count>2</count>
+				</steps>
 			</steps>
 		</steps>
-		<query>input/rules[typeId = null || typeId # /input/typeId]</query>
+		<query>input/rules[typeId = null || typeId # /input/typeId || signalDefinitionType # /input/typeId]</query>
 	</steps>
 </sequence>

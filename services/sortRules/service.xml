@@ -1,0 +1,88 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="6ef5d6d5fef843bf8dbc614deaeb2aa7"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="65468404814d4226af6b6f92daa2d003"
+			lineNumber="2"
+			variable="rule">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="Use the definition priority"
+				disabled="false"
+				id="c9055d5e5d8c4a798e3edf28cea3fe8c"
+				lineNumber="3">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="06d5324316de4ec4977e18c2c5e2ab1d"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>rule/signalDefinitionDefaultPriority</from>
+				<to>rule/priority</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="If the definition does not have one either, set to 0"
+				disabled="false"
+				id="11d34d72222f47a1b1858134a9bc832e"
+				label="rule/priority == null"
+				lineNumber="4">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="2f157fc6b7314be5a9d14ac97d6ea014"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>0</from>
+				<to>rule/priority</to>
+			</steps>
+		</steps>
+		<query>input/rules[priority == null]</query>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="c507e919023f450eae4b6177aeaba8d2"
+			label="input/rules"
+			lineNumber="5">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="74e1af28d7f9498d84c6d385583c56af"
+				serviceId="nabu.utils.List.sort"
+				resultName="result9aaf5c669c54469fa2b248b36939c65d"
+				temporaryMapping="true"
+				x="107"
+				y="91"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="f4eb46693f15444f91e5f60c20d08103"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/rules</from>
+				<to>list</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="f1695e141acd45dc91c8c1241e8388b6"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>priority desc</from>
+				<to>fields[0]</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="cc31dd744b194f7d8d1a89e4c245d873"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result9aaf5c669c54469fa2b248b36939c65d/list</from>
+			<to>output/rules</to>
+		</steps>
+	</steps>
+</sequence>

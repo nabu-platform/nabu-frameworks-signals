@@ -9,7 +9,8 @@
     <field generated="true" name="ruleIndex" type="java.lang.Long"/>
     <field comment="The parent rule" foreignKey="nabu.frameworks.signals.database.types.signalRule:id" minOccurs="0" name="parentId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
     <field comment="The priority of the rule within a selection" name="priority" type="java.lang.Long"/>
-    <field comment="Allow multiple matches. If turned on the execution will continue." name="multiple" type="java.lang.Boolean"/>
+    <field comment="Allow multiple matches. If turned on the execution will continue." minOccurs="0" name="multiple" type="java.lang.Boolean"/>
     <field comment="You can soft delete a rule." name="disabled" type="java.lang.Boolean"/>
     <field comment="Allow for owned rules so it can be used at the application level. This should be the authentication id." minOccurs="0" name="ownerId" type="java.lang.String"/>
+    <field foreignKey="nabu.frameworks.signals.database.types.signalDefinition:id" minOccurs="0" name="signalDefinitionId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
 </structure>

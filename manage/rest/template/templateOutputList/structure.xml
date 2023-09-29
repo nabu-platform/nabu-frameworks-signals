@@ -1,0 +1,4 @@
+<structure name="templateOutputList">
+    <structure definition="nabu.frameworks.signals.manage.rest.template.templateOutput" maxOccurs="unbounded" minOccurs="0" name="results" restrict="input"/>
+    <structure definition="be.nabu.eai.module.services.crud.Page" minOccurs="0" name="page"/>
+</structure>

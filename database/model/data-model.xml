@@ -3,37 +3,67 @@
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalRule</type>
-        <x>51</x>
-        <y>23</y>
+        <x>120</x>
+        <y>13</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalSubscriber</type>
-        <x>690</x>
-        <y>635</y>
+        <x>1308</x>
+        <y>818</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalSubscription</type>
-        <x>528</x>
-        <y>121</y>
+        <x>1564</x>
+        <y>227</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalInstance</type>
-        <x>88</x>
-        <y>617</y>
+        <x>779</x>
+        <y>503</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalInstanceRule</type>
-        <x>40</x>
-        <y>413</y>
+        <x>632</x>
+        <y>248</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalInstanceSubscription</type>
-        <x>735</x>
-        <y>335</y>
+        <x>1297</x>
+        <y>505</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalDefinition</type>
+        <x>153</x>
+        <y>385</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalTemplate</type>
+        <x>127</x>
+        <y>812</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalTemplateParameter</type>
+        <x>82</x>
+        <y>1074</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalWindow</type>
+        <x>1005</x>
+        <y>1</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalDefinitionTemplate</type>
+        <x>200</x>
+        <y>677</y>
     </entries>
 </dataModel>

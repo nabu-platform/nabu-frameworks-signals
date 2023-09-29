@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <crud>
     <allowHeaderAsQueryParameter>true</allowHeaderAsQueryParameter>
+    <broadcastCreate>false</broadcastCreate>
+    <broadcastUpdate>false</broadcastUpdate>
     <coreType>nabu.frameworks.signals.database.types.signalInstanceSubscription</coreType>
     <createRole>$user</createRole>
     <deleteRole>$user</deleteRole>
@@ -10,6 +12,7 @@
         <operator>=</operator>
         <or>false</or>
         <input>true</input>
+        <vary>false</vary>
     </filters>
     <foreignFields>
         <foreignName>signalRuleId:name</foreignName>
@@ -27,18 +30,29 @@
         <foreignName>signalSubscriberId:serviceId</foreignName>
         <localName>serviceId</localName>
     </foreignFields>
+    <hooks>false</hooks>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
+    <restLimitToUser>true</restLimitToUser>
     <updateRole>$user</updateRole>
     <useExplicitLanguage>false</useExplicitLanguage>
+    <useGlobalPermissionContext>false</useGlobalPermissionContext>
     <useLanguage>false</useLanguage>
+    <useListOutputForCreate>false</useListOutputForCreate>
+    <useListOutputForUpdate>false</useListOutputForUpdate>
+    <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
     <views>
+        <broadcastCreate>false</broadcastCreate>
+        <broadcastUpdate>false</broadcastUpdate>
         <filters>
             <caseInsensitive>false</caseInsensitive>
             <key>signalInstanceId</key>
             <operator>=</operator>
             <or>false</or>
             <input>true</input>
+            <vary>false</vary>
         </filters>
         <filters>
             <caseInsensitive>false</caseInsensitive>
@@ -46,6 +60,7 @@
             <operator>=</operator>
             <or>false</or>
             <input>true</input>
+            <vary>false</vary>
         </filters>
         <foreignFields>
             <foreignName>signalSubscriberId:name</foreignName>
@@ -63,12 +78,15 @@
         <type>LIST</type>
     </views>
     <views>
+        <broadcastCreate>false</broadcastCreate>
+        <broadcastUpdate>false</broadcastUpdate>
         <filters>
             <caseInsensitive>false</caseInsensitive>
             <key>signalSubscriberId</key>
             <operator>=</operator>
             <or>false</or>
             <input>true</input>
+            <vary>false</vary>
         </filters>
         <filters>
             <caseInsensitive>false</caseInsensitive>
@@ -76,6 +94,7 @@
             <operator>=</operator>
             <or>false</or>
             <input>true</input>
+            <vary>false</vary>
         </filters>
         <foreignFields>
             <foreignName>signalRuleId:name</foreignName>

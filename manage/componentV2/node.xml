@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2023-05-08T11:01:48.045+02:00" lastModified="2023-06-01T11:07:37.763+02:00" leaf="true" name="component-v2" version="9">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.frameworks.signals.manage.rest.subscriber.create</references>
+    <references>nabu.frameworks.signals.manage.rest.subscriber.list</references>
+    <references>nabu.frameworks.signals.manage.rest.subscriber.listProperties</references>
+    <references>nabu.frameworks.signals.manage.rest.subscriber.update</references>
+    <references>nabu.frameworks.signals.manage.rest.subscription.create</references>
+    <references>nabu.frameworks.signals.manage.rest.subscription.list</references>
+    <references>nabu.frameworks.signals.manage.rest.subscription.update</references>
+    <references>nabu.frameworks.signals.crud.signalInstance</references>
+    <references>nabu.frameworks.signals.crud.signalInstanceRule</references>
+    <references>nabu.frameworks.signals.crud.signalInstanceSubscription</references>
+    <references>nabu.frameworks.signals.crud.signalRule</references>
+    <references>nabu.frameworks.signals.crud.signalSubscriber</references>
+    <references>nabu.frameworks.signals.crud.signalSubscription</references>
+    <references>nabu.frameworks.signals.crud.signalTemplateParameter</references>
+    <references>nabu.frameworks.signals.crud.signalTemplate</references>
+    <references>nabu.frameworks.signals.crud.signalDefinition</references>
+    <references>nabu.frameworks.signals.crud.signalDefinitionTemplate</references>
+    <references>nabu.frameworks.signals.crud.signalWindow</references>
+    <references>nabu.frameworks.signals.manage.rest.definition.list</references>
+    <references>nabu.frameworks.signals.manage.rest.template.create</references>
+    <references>nabu.frameworks.signals.manage.rest.template.list</references>
+    <references>nabu.frameworks.signals.manage.rest.template.update</references>
+</node>

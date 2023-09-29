@@ -1,0 +1,8 @@
+<structure name="pipeline">
+    <structure name="input">
+        <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" maxOccurs="unbounded" minOccurs="0" name="rules"/>
+    </structure>
+    <structure name="output">
+        <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" maxOccurs="unbounded" minOccurs="0" name="rules"/>
+    </structure>
+</structure>

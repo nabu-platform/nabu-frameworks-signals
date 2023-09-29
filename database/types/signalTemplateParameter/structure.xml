@@ -1,0 +1,7 @@
+<structure collectionName="signalTemplateParameters" name="signalTemplateParameter">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field foreignKey="nabu.frameworks.signals.database.types.signalTemplate:id" name="signalTemplateId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="The name of the parameter, this must match exactly with the input parameter of the subscriber service" name="name" type="java.lang.String"/>
+    <field minOccurs="0" name="title" type="java.lang.String"/>
+    <field minOccurs="0" name="description" type="java.lang.String"/>
+</structure>

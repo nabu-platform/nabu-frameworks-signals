@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.crud.CRUDArtifactManager" created="2021-03-05T13:20:26.156+01:00" lastModified="2022-05-02T15:54:52.433+02:00" leaf="false" version="9">
+<node artifactManager="be.nabu.eai.module.services.crud.CRUDArtifactManager" created="2021-03-05T13:20:26.156+01:00" lastModified="2023-05-17T12:28:48.226+02:00" leaf="false" version="17">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
+    <locked>false</locked>
     <properties/>
     <references>nabu.frameworks.signals.database.types.signalRule</references>
     <references>nabu.services.crud.provider.basic.provider</references>

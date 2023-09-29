@@ -1,0 +1,4 @@
+<structure name="definitionOutputList">
+    <structure definition="nabu.frameworks.signals.manage.rest.definition.definitionOutput" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    <structure definition="be.nabu.eai.module.services.crud.Page" minOccurs="0" name="page"/>
+</structure>

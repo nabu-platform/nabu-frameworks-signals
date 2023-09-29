@@ -20,4 +20,8 @@
     <field minOccurs="0" name="before" type="java.util.Date"/>
     <field comment="The calculated trigger key for this subscription / signal" minOccurs="0" name="triggerKey" type="java.lang.String"/>
     <field name="hasInput" type="java.lang.Boolean"/>
+    <field foreignKey="nabu.frameworks.signals.database.types.signalWindow:id" maxOccurs="unbounded" minOccurs="0" name="signalWindowIds" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <structure collectionName="signalWindows" definition="nabu.frameworks.signals.crud.signalWindow.types.output" maxOccurs="unbounded" minOccurs="0" name="signalWindows"/>
+    <structure collectionName="signalWindows" definition="nabu.frameworks.signals.crud.signalWindow.types.output" minOccurs="0" name="signalWindow"/>
+    <field name="inBlock" type="java.lang.Boolean"/>
 </structure>

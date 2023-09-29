@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-03-05T14:12:39.945+01:00" lastModified="2022-09-30T13:32:05.352+02:00" leaf="true" version="68">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-03-05T14:12:39.945+01:00" lastModified="2023-09-29T11:05:18.171+02:00" leaf="true" version="76">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
+    <locked>false</locked>
     <properties/>
-    <references>nabu.frameworks.signals.services.evaluationContext</references>
+    <references>nabu.frameworks.signals.database.types.signalWindow</references>
+    <references>nabu.frameworks.signals.crud.signalWindow.types.output</references>
     <references>nabu.frameworks.signals.types.propertyList</references>
     <references>nabu.frameworks.signals.crud.signalSubscription.types.output</references>
     <references>nabu.utils.reflection.Service.invoke</references>
     <references>java.util.Date</references>
-    <references>nabu.frameworks.signals.crud.signalInstanceSubscription.services.create</references>
-    <references>nabu.frameworks.signals.crud.signalSubscription.services.list</references>
+    <references>nabu.utils.List.unique</references>
     <references>nabu.services.glue.Services.evaluate</references>
+    <references>nabu.frameworks.signals.crud.signalInstanceSubscription.types.output</references>
+    <references>nabu.frameworks.signals.crud.signalWindow.services.list</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.String</references>
+    <references>nabu.data.json.Services.marshal</references>
+    <references>nabu.data.json.Services.unmarshal</references>
+    <references>nabu.frameworks.signals.services.evaluationContext</references>
+    <references>nabu.frameworks.signals.crud.signalInstanceSubscription.services.create</references>
+    <references>nabu.frameworks.tasks.services.queue.validateBlock</references>
+    <references>nabu.frameworks.signals.crud.signalSubscription.services.list</references>
     <references>java.util.UUID</references>
     <references>nabu.utils.reflection.Type.set</references>
     <references>nabu.utils.reflection.Type.newInstance</references>
     <references>nabu.frameworks.signals.crud.signalInstanceRule.services.create</references>
     <references>nabu.utils.String.substring</references>
-    <references>nabu.frameworks.signals.crud.signalInstanceSubscription.types.output</references>
-    <references>java.lang.Boolean</references>
     <references>nabu.frameworks.signals.crud.signalInstanceSubscription.services.list</references>
     <references>java.lang.Object</references>
-    <references>java.lang.String</references>
-    <references>nabu.data.json.Services.marshal</references>
-    <references>nabu.data.json.Services.unmarshal</references>
     <references>nabu.frameworks.signals.crud.signalRule.types.output</references>
     <references>nabu.utils.Date.incrementDuration</references>
 </node>

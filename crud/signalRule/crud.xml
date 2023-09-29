@@ -4,7 +4,11 @@
     <broadcastCreate>false</broadcastCreate>
     <broadcastUpdate>false</broadcastUpdate>
     <coreType>nabu.frameworks.signals.database.types.signalRule</coreType>
+    <createBlacklistFields>created</createBlacklistFields>
+    <createBlacklistFields>modified</createBlacklistFields>
+    <createPermission>signal.manage</createPermission>
     <createRole>$user</createRole>
+    <deletePermission>signal.manage</deletePermission>
     <deleteRole>$user</deleteRole>
     <filters>
         <caseInsensitive>false</caseInsensitive>
@@ -64,11 +68,51 @@
         <input>true</input>
         <vary>false</vary>
     </filters>
+    <foreignFields>
+        <foreignName>signalDefinitionId:rule</foreignName>
+        <localName>signalDefinitionRule</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalDefinitionId:typeId</foreignName>
+        <localName>signalDefinitionType</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalDefinitionId:title</foreignName>
+        <localName>signalDefinitionTitle</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalDefinitionId:description</foreignName>
+        <localName>signalDefinitionDescription</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalDefinitionId:name</foreignName>
+        <localName>signalDefinitionName</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalDefinitionId:defaultPriority</foreignName>
+        <localName>signalDefinitionDefaultPriority</localName>
+    </foreignFields>
+    <foreignFields>
+        <foreignName>signalDefinitionId:defaultMultiple</foreignName>
+        <localName>signalDefinitionDefaultMultiple</localName>
+    </foreignFields>
+    <getPermission>signal.list</getPermission>
+    <hooks>false</hooks>
+    <listPermission>signal.list</listPermission>
     <listRole>$user</listRole>
     <provider>nabu.services.crud.provider.basic.provider</provider>
+    <restLimitToUser>true</restLimitToUser>
+    <updateBlacklistFields>created</updateBlacklistFields>
+    <updateBlacklistFields>modified</updateBlacklistFields>
+    <updatePermission>signal.manage</updatePermission>
+    <updateRegenerateFields>modified</updateRegenerateFields>
     <updateRole>$user</updateRole>
     <useExplicitLanguage>false</useExplicitLanguage>
+    <useGlobalPermissionContext>true</useGlobalPermissionContext>
     <useLanguage>false</useLanguage>
     <useListOutputForCreate>false</useListOutputForCreate>
     <useListOutputForUpdate>false</useListOutputForUpdate>
+    <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
 </crud>

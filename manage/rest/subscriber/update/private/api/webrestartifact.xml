@@ -3,6 +3,11 @@
     <method>PUT</method>
     <path>/signal/subscriberWithProperties/{subscriberId}</path>
     <role>$user</role>
+    <permissionAction>signal.manage</permissionAction>
+    <useServiceContextAsPermissionContext>false</useServiceContextAsPermissionContext>
+    <useWebApplicationAsPermissionContext>false</useWebApplicationAsPermissionContext>
+    <useProjectAsPermissionContext>false</useProjectAsPermissionContext>
+    <useGlobalPermissionContext>true</useGlobalPermissionContext>
     <input>nabu.frameworks.signals.manage.rest.subscriber.updateInput</input>
     <lenient>true</lenient>
     <webApplicationId>false</webApplicationId>
@@ -19,8 +24,10 @@
     <source>false</source>
     <allowRaw>false</allowRaw>
     <domain>false</domain>
+    <origin>false</origin>
     <ignoreOffline>false</ignoreOffline>
     <allowRootArrays>false</allowRootArrays>
     <captureErrors>false</captureErrors>
     <captureSuccessful>false</captureSuccessful>
+    <limitedToInterface>false</limitedToInterface>
 </restInterface>

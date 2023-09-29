@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscriber.create</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscriber.list</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscriber.listProperties</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscriber.update</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscription.create</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscription.list</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.subscription.update</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalInstance</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalInstanceRule</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalInstanceSubscription</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalRule</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalSubscriber</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalSubscription</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalTemplateParameter</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalTemplate</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalDefinition</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalDefinitionTemplate</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalWindow</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.definition.list</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.template.create</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.template.list</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.template.update</webFragments>
+    <audience>MANAGER</audience>
+</webModule>

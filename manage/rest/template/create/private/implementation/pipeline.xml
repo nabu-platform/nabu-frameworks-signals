@@ -1,0 +1,6 @@
+<structure interface="nabu.frameworks.signals.manage.rest.template.create:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <structure collectionName="signalTemplates" definition="nabu.frameworks.signals.database.types.signalTemplate" name="template"/>
+    <structure definition="nabu.frameworks.signals.types.propertyList" name="propertyList"/>
+</structure>

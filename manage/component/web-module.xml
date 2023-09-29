@@ -13,5 +13,4 @@
     <webFragments>nabu.frameworks.signals.manage.rest.subscription.create</webFragments>
     <webFragments>nabu.frameworks.signals.manage.rest.subscription.list</webFragments>
     <webFragments>nabu.frameworks.signals.manage.rest.subscription.update</webFragments>
-    <audience>MANAGER</audience>
 </webModule>

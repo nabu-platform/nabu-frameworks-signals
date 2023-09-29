@@ -1,0 +1,1 @@
+<structure name="templateInput" restrict="id, modified, created" superType="nabu.frameworks.signals.manage.rest.template.templateOutput"/>

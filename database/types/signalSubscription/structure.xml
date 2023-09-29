@@ -6,4 +6,6 @@
     <field comment="An evaluatable rule which extracts a key from the signal. The trigger interval is applied to this key" minOccurs="0" name="triggerKey" type="java.lang.String"/>
     <field comment="Additional properties that are set on the input of the service. This will override any properties that might exist in the subscriber." minOccurs="0" name="input" type="java.lang.String"/>
     <field comment="You can disable a particular subscription to reactivate it later on." minOccurs="0" name="disabled" type="java.lang.Boolean"/>
+    <field foreignKey="nabu.frameworks.signals.database.types.signalTemplate:id" minOccurs="0" name="signalTemplateId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field foreignKey="nabu.frameworks.signals.database.types.signalWindow:id" minOccurs="0" name="signalWindowId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
 </structure>
