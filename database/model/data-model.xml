@@ -66,4 +66,16 @@
         <x>200</x>
         <y>677</y>
     </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalInstanceProperty</type>
+        <x>853</x>
+        <y>848</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalRuleProperty</type>
+        <x>593</x>
+        <y>28</y>
+    </entries>
 </dataModel>

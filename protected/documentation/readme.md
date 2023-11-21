@@ -23,3 +23,21 @@ Ideally we can do a custom check? This would require a spec though..
 
 We have added basic metadata like correlationId etc. Currently it can only be filled in by the one triggering the signal.
 Perhaps we can extract such information from the signal itself via rules or subscribers?
+
+# Properties
+
+In a rule you can decide to extract some properties from a signal, this allows for later statistics to be drawn from the signals.
+You can set a basic rule that extracts the properties and build child rules to actually notify if that is necessary.
+The property key is repeated rather than foreign keyed to allow for easy removal of rule properties.
+
+# Definitions
+
+For different tenants/customers/... we might want to allow them to configure their own rules. We create the definitions to centralize the logic of the rule, allowing it to be applied multiple times in multiple contexts.
+For example a base rule could be => tenantId == "..." with customer-defined child rules based on the definitions.
+
+## Templates
+
+Definitions are usually coupled to a data type (because so are rules). Templates are then a way to standardize the mapping to subscribers based on the given rule definition. It is again the idea to give customers a way to control this themselves without having to configure the nitty gritty details.
+The customer can then say "if this occurs" (the definition), "then send a mail" (the template)
+
+Both templates and definitions have translatable title fields

@@ -1,0 +1,6 @@
+<structure collectionName="signalRuleProperties" name="signalRuleProperty">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field foreignKey="nabu.frameworks.signals.database.types.signalRule:id" name="signalRuleId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
+    <field comment="The key name" name="propertyKey" type="java.lang.String"/>
+    <field comment="The rule that will be run to extract the value" name="propertyRule" type="java.lang.String"/>
+</structure>
