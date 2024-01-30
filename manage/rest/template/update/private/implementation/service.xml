@@ -42,7 +42,8 @@
 			id="953956e686dc48e29e38687a425f1704"
 			label="!template"
 			lineNumber="3"
-			code="404" xsi:nil="true"/>
+			code="404"
+			whitelist="false" xsi:nil="true"/>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Map main"
 			disabled="false"
@@ -126,6 +127,15 @@
 				fixedValue="false">
 			<from>result2f3da2d288074013a5d25a78855971a7/date</from>
 			<to>template/modified</to>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="4ba9d96f16714aa49e74d7a88f80b7f8"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content/triggerThreshold</from>
+			<to>template/triggerThreshold</to>
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"

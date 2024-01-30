@@ -2,18 +2,18 @@
     <structure name="input">
         <field minOccurs="0" name="connectionId" type="java.lang.String"/>
         <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" name="rule"/>
-        <structure definition="java.lang.Object" name="signal"/>
+        <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" name="signal"/>
         <field name="signalInstanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
         <field maxOccurs="unbounded" minOccurs="0" name="typeId" type="java.lang.String"/>
     </structure>
     <structure name="output"/>
     <structure collectionName="signalSubscription" definition="nabu.frameworks.signals.crud.signalSubscription.types.output" maxOccurs="unbounded" minOccurs="0" name="subscriptions"/>
     <structure definition="nabu.frameworks.signals.types.propertyList" name="propertyList"/>
-    <structure definition="java.lang.Object" minOccurs="0" name="serviceInput"/>
+    <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" minOccurs="0" name="serviceInput"/>
     <field name="serviceInputMarshalled" type="java.lang.String"/>
-    <structure definition="java.lang.Object" minOccurs="0" name="serviceOutput"/>
+    <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" minOccurs="0" name="serviceOutput"/>
     <field name="serviceOutputMarshalled" type="java.lang.String"/>
-    <structure definition="java.lang.Object" minOccurs="0" name="propertyValue"/>
+    <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" minOccurs="0" name="propertyValue"/>
     <structure definition="nabu.frameworks.signals.services.evaluationContext" name="context"/>
     <field name="fireSubscription" type="java.lang.Boolean"/>
     <structure collectionName="signalInstanceSubscriptions" definition="nabu.frameworks.signals.crud.signalInstanceSubscription.types.output" minOccurs="0" name="lastFired"/>
@@ -24,4 +24,7 @@
     <structure collectionName="signalWindows" definition="nabu.frameworks.signals.crud.signalWindow.types.output" maxOccurs="unbounded" minOccurs="0" name="signalWindows"/>
     <structure collectionName="signalWindows" definition="nabu.frameworks.signals.crud.signalWindow.types.output" minOccurs="0" name="signalWindow"/>
     <field name="inBlock" type="java.lang.Boolean"/>
+    <field name="fireSuppressed" type="java.lang.Boolean"/>
+    <structure collectionName="signalInstanceSubscriptions" definition="nabu.frameworks.signals.crud.signalInstanceSubscription.types.output" maxOccurs="unbounded" name="suppressedFires"/>
+    <field name="amountOfSuppressedFires" nillable="false" type="java.lang.Long"/>
 </structure>

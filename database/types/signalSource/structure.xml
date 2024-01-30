@@ -1,0 +1,8 @@
+<structure collectionName="signalSources" name="signalSource">
+    <field name="id" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" primaryKey="true" type="java.util.UUID"/>
+    <field comment="service, event,..." name="sourceType" type="java.lang.String"/>
+    <field comment="The id of the source, like the service id" name="sourceId" type="java.lang.String"/>
+    <field comment="The signal will be sent with this type id" name="typeId" type="java.lang.String"/>
+    <field name="disabled" type="java.lang.Boolean"/>
+    <field comment="If there are handlers for subscribing and unsubscribing, you can add configuration" minOccurs="0" name="sourceConfiguration" type="java.lang.String"/>
+</structure>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-02-05T09:56:04.834+01:00" lastModified="2024-01-30T16:03:38.873+01:00" leaf="true" version="20">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.frameworks.process.providers.action.service.stopListener</references>
+    <references>nabu.frameworks.process.startup.selectServicesToListen</references>
+    <references>nabu.misc.auditing.Services.listAudited</references>
+    <references>nabu.frameworks.signals.services.getSupportedConnections</references>
+    <references>nabu.frameworks.process.providers.action.service.utils.deactivateDeprecated</references>
+    <references>nabu.utils.List.unique</references>
+    <references>java.lang.String</references>
+    <references>nabu.utils.List.addAll</references>
+    <references>nabu.frameworks.process.providers.action.service.startListener</references>
+</node>

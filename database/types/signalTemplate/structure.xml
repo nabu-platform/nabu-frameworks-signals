@@ -8,4 +8,5 @@
     <field minOccurs="0" name="input" type="java.lang.String"/>
     <field minOccurs="0" name="defaultTriggerInterval" type="be.nabu.libs.types.base.Duration"/>
     <field minOccurs="0" name="triggerKey" type="java.lang.String"/>
+    <field comment="Make sure a signal is triggered multiple times before it results in an actual call. This uses the triggerInterval as windowing." minOccurs="0" name="triggerThreshold" type="java.lang.Long"/>
 </structure>

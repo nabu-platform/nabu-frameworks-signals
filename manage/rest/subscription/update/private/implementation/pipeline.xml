@@ -3,4 +3,5 @@
     <structure name="output"/>
     <structure definition="nabu.frameworks.signals.types.propertyList" name="list"/>
     <field minOccurs="0" name="listMarshalled" type="java.lang.String"/>
+    <structure collectionName="signalSubscriptions" definition="nabu.frameworks.signals.manage.crud.signalSubscription.types.updateInput" name="updateInput" restrict="id"/>
 </structure>

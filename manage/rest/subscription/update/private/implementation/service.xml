@@ -64,9 +64,39 @@
 		</steps>
 	</steps>
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Map initial"
 			disabled="false"
-			id="61007e73-9b77-41e8-aa25-cb76b827d54d"
+			id="c2b657464efa49be8bb6f20c38f20d30"
 			lineNumber="4">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="dc34ef43b5ef4a6ba2981c25cd2019c8"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>input/content</from>
+			<to>updateInput</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Map marshalled"
+			disabled="false"
+			id="dd6d09b910c44db680a5b893fc646776"
+			lineNumber="5">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="499e2b759317460ba4a441e790a38818"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>listMarshalled</from>
+			<to>updateInput/input</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="true"
+			id="61007e73-9b77-41e8-aa25-cb76b827d54d"
+			lineNumber="6">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="1e7bd510-c86e-4886-99fd-12f269cbfc9e"
@@ -131,6 +161,41 @@
 					fixedValue="false">
 				<from>input/path/subscriptionId</from>
 				<to>id</to>
+			</steps>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="61007e73-9b77-41e8-aa25-cb76b827d54d"
+			lineNumber="7">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="1e7bd510-c86e-4886-99fd-12f269cbfc9e"
+				serviceId="nabu.frameworks.signals.manage.crud.signalSubscription.services.update"
+				resultName="resulta9345e55f4cc41fab4330e7d6bea5411"
+				temporaryMapping="true"
+				x="171"
+				y="75"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="3007b94c-9949-41ec-b696-0aba2db636b3"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/path/subscriptionId</from>
+				<to>id</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="7ca869b021234689bd92b7dc67c46ab2"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>updateInput</from>
+				<to>instance</to>
 			</steps>
 		</steps>
 	</steps>

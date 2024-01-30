@@ -3,79 +3,85 @@
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalRule</type>
-        <x>120</x>
-        <y>13</y>
+        <x>430</x>
+        <y>21</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalSubscriber</type>
-        <x>1308</x>
-        <y>818</y>
+        <x>1725</x>
+        <y>918</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalSubscription</type>
-        <x>1564</x>
-        <y>227</y>
+        <x>1706</x>
+        <y>282</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalInstance</type>
-        <x>779</x>
-        <y>503</y>
+        <x>1259</x>
+        <y>551</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalInstanceRule</type>
-        <x>632</x>
-        <y>248</y>
+        <x>917</x>
+        <y>298</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalInstanceSubscription</type>
-        <x>1297</x>
-        <y>505</y>
+        <x>1723</x>
+        <y>581</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalDefinition</type>
-        <x>153</x>
-        <y>385</y>
+        <x>32</x>
+        <y>529</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalTemplate</type>
-        <x>127</x>
-        <y>812</y>
+        <x>200</x>
+        <y>967</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalTemplateParameter</type>
-        <x>82</x>
-        <y>1074</y>
+        <x>631</x>
+        <y>966</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalWindow</type>
-        <x>1005</x>
-        <y>1</y>
+        <x>1888</x>
+        <y>31</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalDefinitionTemplate</type>
-        <x>200</x>
-        <y>677</y>
+        <x>199</x>
+        <y>824</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalInstanceProperty</type>
-        <x>853</x>
-        <y>848</y>
+        <x>1326</x>
+        <y>1</y>
     </entries>
     <entries>
         <synchronize>true</synchronize>
         <type>nabu.frameworks.signals.database.types.signalRuleProperty</type>
-        <x>593</x>
-        <y>28</y>
+        <x>835</x>
+        <y>6</y>
+    </entries>
+    <entries>
+        <synchronize>true</synchronize>
+        <type>nabu.frameworks.signals.database.types.signalSource</type>
+        <x>30</x>
+        <y>25</y>
     </entries>
 </dataModel>
