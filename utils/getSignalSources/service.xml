@@ -1,0 +1,67 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="998f41ce3927409cbae3b7ae528d13e1"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="411a27e8982f472999193b77ffa992d2"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="d4dd07a60b7548da81d8b2b7fa0a9ca3"
+				serviceId="nabu.frameworks.signals.crud.signalSource.services.list"
+				resultName="resultf8a0ca8b00574479902dace0eed0e221"
+				temporaryMapping="true"
+				x="30"
+				y="30"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="dab1e107fbf74857af462a26729b2268"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/connectionId</from>
+				<to>connectionId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="63cd18539f0c4dbcb1fc855e0df6e09f"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/sourceType</from>
+				<to>filter/sourceType[0]</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="761c8cfb3dbb4c05a5bd327078334aa6"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/sourceId</from>
+				<to>filter/sourceId[0]</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="89daada98dc3434aa1076c65804a08b0"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>false</from>
+				<to>filter/disabled</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="34d2b30714da47dea6153f92d1d1eb90"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultf8a0ca8b00574479902dace0eed0e221/results</from>
+			<to>output/sources</to>
+		</steps>
+	</steps>
+</sequence>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2023-05-08T11:01:48.045+02:00" lastModified="2023-06-01T11:07:37.763+02:00" leaf="true" name="component-v2" version="9">
+<node artifactManager="be.nabu.eai.module.web.component.WebComponentManager" created="2023-05-08T11:01:48.045+02:00" lastModified="2024-01-30T16:28:13.031+01:00" leaf="true" name="component-v2" version="10">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
@@ -26,4 +26,5 @@
     <references>nabu.frameworks.signals.manage.rest.template.create</references>
     <references>nabu.frameworks.signals.manage.rest.template.list</references>
     <references>nabu.frameworks.signals.manage.rest.template.update</references>
+    <references>nabu.frameworks.signals.manage.rest.source.refreshListeners</references>
 </node>

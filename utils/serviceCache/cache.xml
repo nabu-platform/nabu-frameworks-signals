@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cache>
+    <cacheProvider>nabu.frameworks.signals.utils.memoryCache</cacheProvider>
+    <service>nabu.frameworks.signals.utils.getSignalSources</service>
+    <enableInDevelopment>true</enableInDevelopment>
+</cache>

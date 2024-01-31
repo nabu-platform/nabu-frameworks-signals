@@ -22,5 +22,6 @@
     <webFragments>nabu.frameworks.signals.manage.rest.template.create</webFragments>
     <webFragments>nabu.frameworks.signals.manage.rest.template.list</webFragments>
     <webFragments>nabu.frameworks.signals.manage.rest.template.update</webFragments>
+    <webFragments>nabu.frameworks.signals.manage.rest.source.refreshListeners</webFragments>
     <audience>MANAGER</audience>
 </webModule>
