@@ -222,16 +222,109 @@
 			variable="source">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 				disabled="false"
-				id="15079c20ecfb46e3ad897e5af5f3ec70"
+				id="9c36befd7b97497ea4c8a924b250f895"
 				lineNumber="8">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="3f225f97185946a19f5c7e8ab942e966"
+					serviceId="nabu.utils.Runtime.getPipeline"
+					resultName="resulta66cf029a58742c78603d3d5d186bd03"
+					temporaryMapping="true"
+					x="159"
+					y="50"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="72e0910a0be74beeb39b50a56321c3e5"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>input/name</from>
+					<to>serviceId</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="88071075204d4855ab8a23e7bacbc1e9"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>resulta66cf029a58742c78603d3d5d186bd03/pipeline</from>
+				<to>pipeline</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Sequence"
+				disabled="false"
+				id="7f5d895573634194a413f4afe473e42c"
+				label="source/condition != null"
+				lineNumber="9">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
+					id="a3d5902a739544c4a53fa04fdc8df6a7"
+					lineNumber="10">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="40a138689add45419a52c5ea282e2c2f"
+						serviceId="nabu.services.glue.Services.evaluate"
+						resultName="resultf60aaed17a99487e8cd3d0bb6550257b"
+						temporaryMapping="true"
+						x="91"
+						y="66"
+						invocationOrder="0"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="12e792acae914b2a8085e55e931c8f89"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>pipeline</from>
+						<to>context[0]</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="ecaa9c81052b4cb38720d2e0a34fc63c"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>source/condition</from>
+						<to>rule</to>
+					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="a3e52e7164414374829d5ffd919e283a"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>resultf60aaed17a99487e8cd3d0bb6550257b/response</from>
+					<to>result</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Break"
+					disabled="false"
+					id="36d038697f684905a742db4504657f6c"
+					label="!result"
+					lineNumber="11">
+				<count>2</count>
+				<continueExecution>true</continueExecution>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="15079c20ecfb46e3ad897e5af5f3ec70"
+				lineNumber="12">
 			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 					disabled="false"
 					id="9854893fa71f4547841caf0a7dbf49d7"
 					serviceId="nabu.frameworks.signals.services.fireWithType"
 					resultName="result2fd17b05644743df8332ae4104318ed7"
 					temporaryMapping="true"
-					x="544"
-					y="132"
+					x="296"
+					y="164"
 					invocationOrder="1"
 					asynchronous="false"
 					recache="false">
@@ -255,15 +348,6 @@
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
-						id="16742a25aa164cc6b62a1a1715070840"
-						mask="false"
-						optional="false"
-						fixedValue="false">
-					<from>result847d0348e2f3477398309c031aba3a14/pipeline</from>
-					<to>signal</to>
-				</steps>
-				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
-						disabled="false"
 						id="a561b9fa63bf46f2a5e2f9b6438554a2"
 						mask="false"
 						optional="false"
@@ -271,26 +355,14 @@
 					<from>serviceContextConnectionId</from>
 					<to>connectionId</to>
 				</steps>
-			</steps>
-			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
-					disabled="false"
-					id="16860cb0e94148cf9205e684e3765be9"
-					serviceId="nabu.utils.Runtime.getPipeline"
-					resultName="result847d0348e2f3477398309c031aba3a14"
-					temporaryMapping="true"
-					x="58"
-					y="43"
-					invocationOrder="0"
-					asynchronous="false"
-					recache="false">
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
-						id="140d24ac5a0b47b0aea7205911ddb51e"
+						id="1adf38fc391a4c4ba0ead552d1813c1f"
 						mask="false"
 						optional="false"
 						fixedValue="false">
-					<from>input/name</from>
-					<to>serviceId</to>
+					<from>pipeline</from>
+					<to>signal</to>
 				</steps>
 			</steps>
 		</steps>

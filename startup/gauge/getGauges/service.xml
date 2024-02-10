@@ -1,0 +1,49 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="5af8ccf5cb6c4834a970da935c21ac88"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="79dd063e34604dc4b8341aec3d722353"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="9c028df91567433880e1e4f2dad55001"
+				serviceId="nabu.frameworks.signals.crud.signalSource.services.list"
+				resultName="result8d6b31bf8fab49fdbfda8e80f03e954b"
+				temporaryMapping="true"
+				x="34"
+				y="44"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="6d0f50060efd4c05b912497fd61e968b"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/connectionId</from>
+				<to>connectionId</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="47220d3cd5974047b423998243491918"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>gauge</from>
+				<to>filter/sourceType[0]</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="1e11ce6b111e48228353e98e9d6c6e82"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result8d6b31bf8fab49fdbfda8e80f03e954b/results</from>
+			<to>output/gauges</to>
+		</steps>
+	</steps>
+</sequence>

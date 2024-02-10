@@ -2,5 +2,6 @@
 <cache>
     <cacheProvider>nabu.frameworks.signals.utils.memoryCache</cacheProvider>
     <service>nabu.frameworks.signals.utils.getSignalSources</service>
+    <service>nabu.frameworks.signals.startup.gauge.getGauges</service>
     <enableInDevelopment>true</enableInDevelopment>
 </cache>

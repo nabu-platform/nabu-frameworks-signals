@@ -1,0 +1,9 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field minOccurs="0" name="connectionId" type="java.lang.String"/>
+        <field name="counter" type="java.lang.Long"/>
+    </structure>
+    <structure name="output"/>
+    <structure collectionName="signalSources" definition="nabu.frameworks.signals.database.types.signalSource" maxOccurs="unbounded" minOccurs="0" name="gauges"/>
+    <field name="shouldRun" type="java.lang.Boolean"/>
+</structure>

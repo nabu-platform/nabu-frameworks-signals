@@ -19,4 +19,30 @@
 				recache="false">
 		</steps>
 	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="6224e6217dcb4873b3142a747d6b0091"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="ce30ee9543ed4e3a8d0e7de86350c821"
+				serviceId="nabu.utils.Cache.clear"
+				resultName="resultd53adbd4dd7a498b9f009379ddeffd04"
+				temporaryMapping="true"
+				x="169"
+				y="46"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="999f41dd93124b00b7d5e5ea24d25f54"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>nabu.frameworks.signals.utils.memoryCache</from>
+				<to>cacheProviderId</to>
+			</steps>
+		</steps>
+	</steps>
 </sequence>

@@ -5,4 +5,6 @@
     <field comment="The signal will be sent with this type id" name="typeId" type="java.lang.String"/>
     <field name="disabled" type="java.lang.Boolean"/>
     <field comment="If there are handlers for subscribing and unsubscribing, you can add configuration" minOccurs="0" name="sourceConfiguration" type="java.lang.String"/>
+    <field comment="Only relevant for type &quot;gauge&quot;. Higher delay means we poll less often" minOccurs="0" name="pollDelay" type="java.lang.Long"/>
+    <field comment="Do an initial filter on the source data to see if it is relevant" minOccurs="0" name="condition" type="java.lang.String"/>
 </structure>

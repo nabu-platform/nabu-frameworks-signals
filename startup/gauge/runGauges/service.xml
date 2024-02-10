@@ -1,0 +1,94 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="1eea0b41488c491fb68c7063dd101e30"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="83c1b7dba8934f0d83b298b8274f0802"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="df72bb6c67de4ee4adc004b3e77ad492"
+				serviceId="nabu.frameworks.signals.startup.gauge.getGauges"
+				resultName="resulte172fc2758f746099f4625258c12a3e2"
+				temporaryMapping="true"
+				x="208"
+				y="62"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="5d40a29965584c20bac8073e170569c2"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/connectionId</from>
+				<to>connectionId</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="31c1bf37b0ab4e6eb35e685a14a07ace"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resulte172fc2758f746099f4625258c12a3e2/gauges</from>
+			<to>gauges</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="c8bb528a057347f086472473ef7ce05f"
+			lineNumber="3"
+			variable="gauge">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
+				disabled="false"
+				id="1e45993012e04bd48d19c4b76a91ffe7"
+				lineNumber="4">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
+					id="7facc6ba5019484f99aadda32e766e30"
+					label="gauge/pollDelay != null &amp;&amp; gauge/pollDelay &gt; 1"
+					lineNumber="5">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="6ae4afb116f2437cadc7c1d6c0437d0d"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>=input/counter % gauge/pollDelay == 0</from>
+					<to>shouldRun</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+					disabled="false"
+					id="34cb5ddb6e044718a85ba92f9fe40832"
+					lineNumber="6">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="107f8c26506e4c9cafe6ba84875bef8f"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>true</from>
+					<to>shouldRun</to>
+				</steps>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Break"
+				disabled="false"
+				id="115d121bd00d4cefb48c8f887f2d3403"
+				label="!shouldRun"
+				lineNumber="7">
+			<count>1</count>
+			<continueExecution>true</continueExecution>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="7cc3dba9811541bcbbecc78b6a6640d3"
+				lineNumber="8">
+		</steps>
+		<query>gauges</query>
+	</steps>
+</sequence>
