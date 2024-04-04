@@ -6,5 +6,8 @@
     <field name="disabled" type="java.lang.Boolean"/>
     <field comment="If there are handlers for subscribing and unsubscribing, you can add configuration" minOccurs="0" name="sourceConfiguration" type="java.lang.String"/>
     <field comment="Only relevant for type &quot;gauge&quot;. Higher delay means we poll less often" minOccurs="0" name="pollDelay" type="java.lang.Long"/>
-    <field comment="Do an initial filter on the source data to see if it is relevant" minOccurs="0" name="condition" type="java.lang.String"/>
+    <field comment="Whether to trigger on success" name="succeeded" type="java.lang.Boolean"/>
+    <field comment="Whether to trigger on failured (e.g. for a service this is an exception)" name="failed" type="java.lang.Boolean"/>
+    <field minOccurs="0" name="groupId" type="java.lang.String"/>
+    <field minOccurs="0" name="contextId" type="java.lang.String"/>
 </structure>

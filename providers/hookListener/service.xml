@@ -3,9 +3,62 @@
 		id="6ad673d0-be29-4397-b654-476135ce83aa"
 		lineNumber="1">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			comment="Connection based on root service context. Check description for more info"
+			disabled="false"
+			id="8adce1d6637f4ade83ba8296568980eb"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="1493b7b7f64d4057a16ab570d001eaee"
+				serviceId="nabu.protocols.jdbc.pool.Services.connectionForContext"
+				resultName="resultbe1a6154ad474e8b82d10448aa639a50"
+				temporaryMapping="true"
+				x="103"
+				y="64"
+				invocationOrder="1"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="924c65fb17a140249992dbcc429de99d"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>nabu.frameworks.signals</from>
+				<to>context</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="670791bc128b482fb0d10e270283a372"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>nabu.frameworks.signals.database.model</from>
+				<to>requiredDependencies[0]</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="07af6590241142bdacd88dd194b59f19"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultbe1a6154ad474e8b82d10448aa639a50/connectionId</from>
+			<to>connectionId</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Break"
+			comment="The current database context is not interested"
+			disabled="false"
+			id="cf240cdfc4854f5bac89903cd61657ff"
+			label="connectionId == null"
+			lineNumber="3">
+		<count>1</count>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			disabled="false"
 			id="7aab2163-e877-4214-96d2-418ee1dd52c5"
-			lineNumber="2">
+			lineNumber="4">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="c5ea13a2-3a87-46bf-a97f-7cb49363497c"
@@ -43,6 +96,24 @@
 					fixedValue="true">
 				<from>=input/hook + ":input"</from>
 				<to>hierarchy[0]</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="fe13784286324e49bc2991e789341fef"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>true</from>
+				<to>logOnlyIfTriggered</to>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="b995ad1b65084d349339424f2ccad329"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>connectionId</from>
+				<to>connectionId</to>
 			</steps>
 		</steps>
 	</steps>

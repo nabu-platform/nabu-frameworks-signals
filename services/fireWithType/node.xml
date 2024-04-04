@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-05-01T08:44:37.715+02:00" lastModified="2024-01-31T11:00:45.250+01:00" leaf="true" version="14">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2022-05-01T08:44:37.715+02:00" lastModified="2024-03-08T09:16:17.006+01:00" leaf="true" version="16">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>
     <references>nabu.frameworks.signals.crud.signalInstance.services.create</references>
-    <references>nabu.frameworks.signals.services.getConnectionId</references>
     <references>nabu.utils.Runtime.getCurrentToken</references>
-    <references>nabu.frameworks.signals.crud.signalInstance.types.createOutput</references>
-    <references>nabu.utils.Runtime.getCorrelationId</references>
     <references>nabu.frameworks.signals.crud.signalRule.services.list</references>
-    <references>java.lang.Object</references>
     <references>nabu.frameworks.signals.services.sortRules</references>
+    <references>java.lang.Integer</references>
+    <references>nabu.frameworks.signals.services.evaluateRules</references>
+    <references>nabu.frameworks.signals.services.getConnectionId</references>
+    <references>nabu.services.jdbc.Services.delete</references>
+    <references>nabu.frameworks.signals.crud.signalInstance.types.createOutput</references>
+    <references>nabu.utils.List.size</references>
+    <references>nabu.utils.Runtime.getCorrelationId</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.Object</references>
     <references>java.lang.String</references>
     <references>nabu.data.json.Services.marshal</references>
     <references>nabu.frameworks.signals.crud.signalRule.types.output</references>
-    <references>nabu.frameworks.signals.services.evaluateRules</references>
 </node>

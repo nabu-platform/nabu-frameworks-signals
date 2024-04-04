@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-03-05T14:10:07.104+01:00" lastModified="2023-09-13T17:28:06.004+02:00" leaf="true" version="46">
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2021-03-05T14:10:07.104+01:00" lastModified="2024-03-08T09:12:40.040+01:00" leaf="true" version="49">
     <environmentId>apollo</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>
     <references>nabu.frameworks.signals.services.evaluationContext</references>
     <references>nabu.frameworks.signals.crud.signalRule.services.list</references>
-    <references>java.lang.Boolean</references>
-    <references>java.lang.Object</references>
     <references>nabu.services.glue.Services.evaluate</references>
     <references>nabu.frameworks.signals.services.sortRules</references>
-    <references>java.lang.String</references>
     <references>java.util.UUID</references>
-    <references>nabu.frameworks.signals.services.signalRule</references>
     <references>java.lang.Integer</references>
-    <references>nabu.frameworks.signals.crud.signalRule.types.output</references>
     <references>nabu.frameworks.signals.services.evaluateRules</references>
+    <references>nabu.utils.List.addAll</references>
+    <references>java.lang.Boolean</references>
+    <references>java.lang.Object</references>
+    <references>java.lang.String</references>
+    <references>nabu.frameworks.signals.services.signalRule</references>
+    <references>nabu.frameworks.signals.crud.signalRule.types.output</references>
 </node>

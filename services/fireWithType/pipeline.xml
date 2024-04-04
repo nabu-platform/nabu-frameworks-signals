@@ -7,9 +7,11 @@
         <field minOccurs="0" name="correlationId" type="java.lang.String"/>
         <field minOccurs="0" name="groupId" type="java.lang.String"/>
         <field minOccurs="0" name="contextId" type="java.lang.String"/>
+        <field comment="By default we log every signal instance even if it triggers no rules. For slightly higher volume signals that need proper categorization, you can set this to true which will only result in a log if it actually triggers a rule" minOccurs="0" name="logOnlyIfTriggered" type="java.lang.Boolean"/>
     </structure>
     <structure name="output"/>
-    <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" maxOccurs="unbounded" minOccurs="0" name="rules"/>
+    <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" enricher="nabu.frameworks.signals.crud.signalRule.services.list" maxOccurs="unbounded" minOccurs="0" name="rules" persister="nabu.frameworks.signals.crud.signalRule.batch.updateAll"/>
     <field minOccurs="0" name="connectionId" type="java.lang.String"/>
     <structure collectionName="signalInstances" definition="nabu.frameworks.signals.crud.signalInstance.types.createOutput" name="signalInstance" restrict="created"/>
+    <field minOccurs="0" name="amountOfTriggeredRules" type="java.lang.Integer"/>
 </structure>

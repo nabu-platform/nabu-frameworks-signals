@@ -401,6 +401,64 @@
 					<to>typeId</to>
 				</steps>
 			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="83c8a65cb8a444cda97c2e2b822c35ed"
+					serviceId="nabu.utils.List.size"
+					resultName="resultefb0cdc65406482381bbdb70f3d10dfe"
+					temporaryMapping="true"
+					x="444"
+					y="190"
+					invocationOrder="1"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="1bd1929b0f074557bf4dde2a6267af05"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>resultad4bf6405162487c8b441f6db76d8905/triggeredRules</from>
+					<to>list</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="422b66ae79ea468cae5514dafabd8128"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>resultefb0cdc65406482381bbdb70f3d10dfe/size</from>
+				<to>amountOfTriggeredRules</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				comment="It's not ideal but because of foreign keys it has to be inserted first. We delete it if we don't actually need it"
+				disabled="false"
+				id="074f3537f0724023abab7b8dd6604fdf"
+				label="amountOfTriggeredRules == 0 &amp;&amp; input/logOnlyIfTriggered == true"
+				lineNumber="10">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="940771bd248f45ebadf75174e204066d"
+					serviceId="nabu.services.jdbc.Services.delete"
+					resultName="result9bf2f0d401b040d7b66cb6599922cd04"
+					temporaryMapping="true"
+					x="159"
+					y="104"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="9e2b25e651e04095b166fb28b7e74145"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>signalInstance</from>
+					<to>instances[0]</to>
+				</steps>
+			</steps>
 		</steps>
 	</steps>
 </sequence>

@@ -1,4 +1,5 @@
 <structure interface="be.nabu.eai.module.services.iface.HookListener.fire" name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
+    <field minOccurs="0" name="connectionId" type="java.lang.String"/>
 </structure>

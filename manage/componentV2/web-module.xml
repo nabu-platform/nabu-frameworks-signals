@@ -23,5 +23,6 @@
     <webFragments>nabu.frameworks.signals.manage.rest.template.list</webFragments>
     <webFragments>nabu.frameworks.signals.manage.rest.template.update</webFragments>
     <webFragments>nabu.frameworks.signals.manage.rest.source.refreshListeners</webFragments>
+    <webFragments>nabu.frameworks.signals.crud.signalSource</webFragments>
     <audience>MANAGER</audience>
 </webModule>

@@ -6,7 +6,8 @@
 			disabled="false"
 			id="b9bc694d-6061-4c4a-8532-874a52c0fc58"
 			lineNumber="2"
-			variable="rule">
+			variable="rule"
+			into="output/triggeredRules">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 				comment="Map the evaluation context"
 				disabled="false"
@@ -262,6 +263,15 @@
 						<to>typeId</to>
 					</steps>
 				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="5f137fc17ee940aa90622b302c5e592b"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>rule</from>
+					<to>output/triggeredRules[0]</to>
+				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 					comment="Get child rules"
@@ -449,6 +459,45 @@
 						<from>input/signalInstanceId</from>
 						<to>signalInstanceId</to>
 					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+						disabled="false"
+						id="85948ac92bea441892116688c49db0da"
+						serviceId="nabu.utils.List.addAll"
+						resultName="result2da66da510834c1086db2c6783c5e4aa"
+						temporaryMapping="true"
+						x="520"
+						y="263"
+						invocationOrder="1"
+						asynchronous="false"
+						recache="false">
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="44251f48acb0442a8a262d5937705e0a"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>output/triggeredRules</from>
+						<to>list</to>
+					</steps>
+					<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+							disabled="false"
+							id="8454aba7e0364a968febfe0aaa6a3fe2"
+							mask="false"
+							optional="false"
+							fixedValue="false">
+						<from>resultebe2baad570646ca82f81854c1b6ff76/triggeredRules</from>
+						<to>objects</to>
+					</steps>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="653af197bc254e3ca0d9e72c53f1d480"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>result2da66da510834c1086db2c6783c5e4aa/list</from>
+					<to>output/triggeredRules</to>
 				</steps>
 			</steps>
 			<steps xsi:type="be.nabu.libs.services.vm.step.Switch"
