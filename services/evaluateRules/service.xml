@@ -355,11 +355,11 @@
 				</steps>
 				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
 						disabled="false"
-						id="d502aade-2012-41ce-a068-7ac97b6a7609"
+						id="009609f8c3d54c0ba63e366c7e8b727f"
 						mask="false"
 						optional="false"
 						fixedValue="false">
-					<from>resultb4954f82840d4251bee00f373efc3b4b/page/total</from>
+					<from>resultb4954f82840d4251bee00f373efc3b4b/page/totalRowCount</from>
 					<to>amountOfChildren</to>
 				</steps>
 			</steps>
