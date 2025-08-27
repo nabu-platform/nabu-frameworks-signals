@@ -1,30 +1,30 @@
 <structure name="pipeline">
     <structure name="input">
         <field minOccurs="0" name="connectionId" type="java.lang.String"/>
-        <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" name="rule"/>
-        <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" name="signal"/>
+        <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" enricher="nabu.frameworks.signals.crud.signalRule.services.list" name="rule" persister="nabu.frameworks.signals.crud.signalRule.batch.updateAll"/>
+        <structure collectionName="teamsTemplates" definition="java.lang.Object" name="signal"/>
         <field name="signalInstanceId" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
         <field maxOccurs="unbounded" minOccurs="0" name="typeId" type="java.lang.String"/>
     </structure>
     <structure name="output"/>
-    <structure collectionName="signalSubscription" definition="nabu.frameworks.signals.crud.signalSubscription.types.output" maxOccurs="unbounded" minOccurs="0" name="subscriptions"/>
+    <structure collectionName="signalSubscription" definition="nabu.frameworks.signals.crud.signalSubscription.types.output" enricher="nabu.frameworks.signals.crud.signalSubscription.services.list" maxOccurs="unbounded" minOccurs="0" name="subscriptions" persister="nabu.frameworks.signals.crud.signalSubscription.batch.updateAll"/>
     <structure definition="nabu.frameworks.signals.types.propertyList" name="propertyList"/>
-    <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" minOccurs="0" name="serviceInput"/>
+    <structure collectionName="teamsTemplates" definition="java.lang.Object" minOccurs="0" name="serviceInput"/>
     <field name="serviceInputMarshalled" type="java.lang.String"/>
-    <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" minOccurs="0" name="serviceOutput"/>
+    <structure collectionName="teamsTemplates" definition="java.lang.Object" minOccurs="0" name="serviceOutput"/>
     <field name="serviceOutputMarshalled" type="java.lang.String"/>
-    <structure collectionCrudProvider="odata" collectionName="teamsTemplates" definition="java.lang.Object" minOccurs="0" name="propertyValue"/>
+    <structure collectionName="teamsTemplates" definition="java.lang.Object" minOccurs="0" name="propertyValue"/>
     <structure definition="nabu.frameworks.signals.services.evaluationContext" name="context"/>
     <field name="fireSubscription" type="java.lang.Boolean"/>
-    <structure collectionName="signalInstanceSubscriptions" definition="nabu.frameworks.signals.crud.signalInstanceSubscription.types.output" minOccurs="0" name="lastFired"/>
+    <structure collectionName="signalInstanceSubscriptions" definition="nabu.frameworks.signals.crud.signalInstanceSubscription.types.output" enricher="nabu.frameworks.signals.crud.signalInstanceSubscription.services.list" minOccurs="0" name="lastFired" persister="nabu.frameworks.signals.crud.signalInstanceSubscription.batch.updateAll"/>
     <field minOccurs="0" name="before" type="java.util.Date"/>
     <field comment="The calculated trigger key for this subscription / signal" minOccurs="0" name="triggerKey" type="java.lang.String"/>
     <field name="hasInput" type="java.lang.Boolean"/>
     <field foreignKey="nabu.frameworks.signals.database.types.signalWindow:id" maxOccurs="unbounded" minOccurs="0" name="signalWindowIds" pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|[0-9a-fA-F]{32}" type="java.util.UUID"/>
-    <structure collectionName="signalWindows" definition="nabu.frameworks.signals.crud.signalWindow.types.output" maxOccurs="unbounded" minOccurs="0" name="signalWindows"/>
-    <structure collectionName="signalWindows" definition="nabu.frameworks.signals.crud.signalWindow.types.output" minOccurs="0" name="signalWindow"/>
+    <structure collectionName="signalWindows" definition="nabu.frameworks.signals.crud.signalWindow.types.output" enricher="nabu.frameworks.signals.crud.signalWindow.services.list" maxOccurs="unbounded" minOccurs="0" name="signalWindows" persister="nabu.frameworks.signals.crud.signalWindow.batch.updateAll"/>
+    <structure collectionName="signalWindows" definition="nabu.frameworks.signals.crud.signalWindow.types.output" enricher="nabu.frameworks.signals.crud.signalWindow.services.list" minOccurs="0" name="signalWindow" persister="nabu.frameworks.signals.crud.signalWindow.batch.updateAll"/>
     <field name="inBlock" type="java.lang.Boolean"/>
     <field name="fireSuppressed" type="java.lang.Boolean"/>
-    <structure collectionName="signalInstanceSubscriptions" definition="nabu.frameworks.signals.crud.signalInstanceSubscription.types.output" maxOccurs="unbounded" name="suppressedFires"/>
+    <structure collectionName="signalInstanceSubscriptions" definition="nabu.frameworks.signals.crud.signalInstanceSubscription.types.output" enricher="nabu.frameworks.signals.crud.signalInstanceSubscription.services.list" maxOccurs="unbounded" name="suppressedFires" persister="nabu.frameworks.signals.crud.signalInstanceSubscription.batch.updateAll"/>
     <field name="amountOfSuppressedFires" nillable="false" type="java.lang.Long"/>
 </structure>

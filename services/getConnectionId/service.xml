@@ -1,10 +1,12 @@
 <sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		disabled="false"
-		id="105fd318-c40a-467a-8ec3-772fa252ed9c">
+		id="105fd318-c40a-467a-8ec3-772fa252ed9c"
+		lineNumber="1">
 	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
 			comment="Get connection settings"
 			disabled="false"
-			id="bbe11e8c-897c-4bee-9a55-4e4b2b641158">
+			id="bbe11e8c-897c-4bee-9a55-4e4b2b641158"
+			lineNumber="2">
 		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
 				disabled="false"
 				id="ae75c60b-1e35-4b05-9b8c-8edfd2bba306"

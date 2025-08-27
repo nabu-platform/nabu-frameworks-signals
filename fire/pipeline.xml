@@ -6,7 +6,7 @@
         <field minOccurs="0" name="contextId" type="java.lang.String"/>
     </structure>
     <structure name="output"/>
-    <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" maxOccurs="unbounded" minOccurs="0" name="rules"/>
+    <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" enricher="nabu.frameworks.signals.crud.signalRule.services.list" maxOccurs="unbounded" minOccurs="0" name="rules" persister="nabu.frameworks.signals.crud.signalRule.batch.updateAll"/>
     <field minOccurs="0" name="connectionId" type="java.lang.String"/>
     <structure collectionName="signalInstances" definition="nabu.frameworks.signals.crud.signalInstance.types.createOutput" name="signalInstance" restrict="created"/>
     <structure definition="nabu.utils.types.TypeInspection" minOccurs="0" name="inspection"/>

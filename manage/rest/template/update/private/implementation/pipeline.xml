@@ -1,6 +1,6 @@
 <structure interface="nabu.frameworks.signals.manage.rest.template.update:api" name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
-    <structure collectionName="signalTemplates" definition="nabu.frameworks.signals.crud.signalTemplate.types.output" name="template"/>
+    <structure collectionName="signalTemplates" definition="nabu.frameworks.signals.crud.signalTemplate.types.output" enricher="nabu.frameworks.signals.crud.signalTemplate.services.list" name="template" persister="nabu.frameworks.signals.crud.signalTemplate.batch.updateAll"/>
     <structure definition="nabu.frameworks.signals.types.propertyList" name="propertyList"/>
 </structure>

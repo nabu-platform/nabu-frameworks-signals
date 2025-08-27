@@ -1,8 +1,8 @@
 <structure name="pipeline">
     <structure name="input">
-        <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" maxOccurs="unbounded" minOccurs="0" name="rules"/>
+        <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" enricher="nabu.frameworks.signals.crud.signalRule.services.list" maxOccurs="unbounded" minOccurs="0" name="rules" persister="nabu.frameworks.signals.crud.signalRule.batch.updateAll"/>
     </structure>
     <structure name="output">
-        <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" maxOccurs="unbounded" minOccurs="0" name="rules"/>
+        <structure collectionName="signalRules" definition="nabu.frameworks.signals.crud.signalRule.types.output" enricher="nabu.frameworks.signals.crud.signalRule.services.list" maxOccurs="unbounded" minOccurs="0" name="rules" persister="nabu.frameworks.signals.crud.signalRule.batch.updateAll"/>
     </structure>
 </structure>

@@ -5,6 +5,6 @@
         <field name="sourceId" type="java.lang.String"/>
     </structure>
     <structure name="output">
-        <structure collectionName="signalSources" definition="nabu.frameworks.signals.crud.signalSource.types.output" maxOccurs="unbounded" minOccurs="0" name="sources"/>
+        <structure collectionName="signalSources" definition="nabu.frameworks.signals.crud.signalSource.types.output" enricher="nabu.frameworks.signals.crud.signalSource.services.list" maxOccurs="unbounded" minOccurs="0" name="sources" persister="nabu.frameworks.signals.crud.signalSource.batch.updateAll"/>
     </structure>
 </structure>

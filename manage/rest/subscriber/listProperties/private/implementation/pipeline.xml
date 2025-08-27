@@ -2,7 +2,7 @@
     <structure name="input"/>
     <structure name="output"/>
     <structure definition="nabu.utils.types.ParameterDescription" maxOccurs="unbounded" minOccurs="0" name="parameters"/>
-    <structure collectionName="signalSubscribers" definition="nabu.frameworks.signals.manage.crud.signalSubscriber.types.output" name="subscriber"/>
+    <structure collectionName="signalSubscribers" definition="nabu.frameworks.signals.manage.crud.signalSubscriber.types.output" enricher="nabu.frameworks.signals.manage.crud.signalSubscriber.services.list" name="subscriber" persister="nabu.frameworks.signals.manage.crud.signalSubscriber.batch.updateAll"/>
     <structure definition="nabu.frameworks.signals.types.propertyList" name="propertyList"/>
     <structure definition="nabu.frameworks.signals.manage.rest.subscriber.serviceProperty" minOccurs="0" name="correspondingProperty"/>
 </structure>

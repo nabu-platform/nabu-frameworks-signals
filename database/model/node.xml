@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node artifactManager="be.nabu.eai.module.data.model.DataModelManager" created="2021-03-05T09:20:56.949+01:00" lastModified="2024-03-08T09:17:26.822+01:00" leaf="true" version="109">
-    <environmentId>apollo</environmentId>
+<node artifactManager="be.nabu.eai.module.data.model.DataModelManager" created="2021-03-05T09:20:56.949+01:00" lastModified="2025-08-26T12:22:01.354+02:00" leaf="true" version="110">
+    <environmentId>ares</environmentId>
     <hidden>false</hidden>
     <locked>false</locked>
     <properties/>

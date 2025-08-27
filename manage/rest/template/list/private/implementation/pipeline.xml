@@ -1,6 +1,6 @@
 <structure interface="nabu.frameworks.signals.manage.rest.template.list:api" name="pipeline">
     <structure name="input"/>
     <structure name="output"/>
-    <structure collectionName="signalTemplates" definition="nabu.frameworks.signals.crud.signalTemplate.types.output" maxOccurs="unbounded" minOccurs="0" name="results"/>
+    <structure collectionName="signalTemplates" definition="nabu.frameworks.signals.crud.signalTemplate.types.output" enricher="nabu.frameworks.signals.crud.signalTemplate.services.list" maxOccurs="unbounded" minOccurs="0" name="results" persister="nabu.frameworks.signals.crud.signalTemplate.batch.updateAll"/>
     <structure definition="nabu.frameworks.signals.types.propertyList" name="propertyList"/>
 </structure>
